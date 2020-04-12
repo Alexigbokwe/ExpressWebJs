@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const userRoutes = require("./Routes/userRoutes/index");
 
 const app = express();
-
 //Using the routes
 app.use("/api/user/", userRoutes);
 

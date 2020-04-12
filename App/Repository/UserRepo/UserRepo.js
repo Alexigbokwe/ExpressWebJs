@@ -27,7 +27,7 @@ const users = [
   }
 ];
 
-class UserModel {
+class UserRepository {
   getAUser(id) {
     let user = users.find(element => {
       if (element.id === id) {
@@ -42,4 +42,4 @@ class UserModel {
   }
 }
 
-module.exports = UserModel;
+module.exports = new UserRepository();

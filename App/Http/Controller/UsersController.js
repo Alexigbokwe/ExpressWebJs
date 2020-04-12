@@ -9,27 +9,29 @@
 
 "use strict";
 const HttpError = require("../Middleware/HttpError");
-const UserModel = new (require("../../Repository/UserRepo/UserModel"))();
+const UserRepository = require("../../Repository/UserRepo/UserRepo");
 
 class UsersController {
-  constructor() {}
+  constructor(UserRepository) {
+    this.UserRepository = UserRepository;
+  }
   index(req, res) {
     console.log("Get request is working");
     res.json({ message: "It Worked!" });
   }
 
   allUsers(req, res) {
-    res.json(UserModel.getAllUsers());
+    res.json(UserRepository.getAllUsers());
   }
 
   User(req, res, next) {
     let id = parseInt(req.params.id);
-    if (!UserModel.getAUser(id)) {
+    if (!UserRepository.getAUser(id)) {
       //handling error
       return next(new HttpError("Could not find resource", 404));
     }
-    res.json(UserModel.getAUser(id));
+    res.json(UserRepository.getAUser(id));
   }
 }
 
-module.exports = UsersController;
+module.exports = new UsersController();
