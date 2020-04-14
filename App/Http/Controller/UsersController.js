@@ -5,32 +5,32 @@
                 acts as the coordinator between the View and the Model. The User Controller receives 
                 an input from the users via the View, then processes the user's data with the help of Model 
                 and passes the results back to the View.
+    For Dependency Injection: Your class names must be in a camelCase format.
+              e.g injecting userRepo will be // 
+              const userRepo = require("container").resolve("userRepository");
 ========================================================================================== **/
 
 "use strict";
 const HttpError = require("../Middleware/HttpError");
-const UserRepository = require("../../Repository/UserRepo/UserRepo");
+const userRepo = require("container").resolve("userRepository");
 
 class UsersController {
-  constructor(UserRepository) {
-    this.UserRepository = UserRepository;
-  }
   index(req, res) {
     console.log("Get request is working");
     res.json({ message: "It Worked!" });
   }
 
   allUsers(req, res) {
-    res.json(UserRepository.getAllUsers());
+    res.json(userRepo.getAllUsers());
   }
 
   User(req, res, next) {
     let id = parseInt(req.params.id);
-    if (!UserRepository.getAUser(id)) {
+    if (!userRepo.getAUser(id)) {
       //handling error
       return next(new HttpError("Could not find resource", 404));
     }
-    res.json(UserRepository.getAUser(id));
+    res.json(userRepo.getAUser(id));
   }
 }
 

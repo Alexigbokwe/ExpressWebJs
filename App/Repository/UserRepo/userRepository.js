@@ -38,8 +38,12 @@ class UserRepository {
   }
 
   getAllUsers() {
+    var record = [
+      { name: "IJ", number: "08024027420" },
+      { name: "Beauty", number: "08107223596" }
+    ];
     return users;
   }
 }
 
-module.exports = new UserRepository();
+module.exports = UserRepository;
