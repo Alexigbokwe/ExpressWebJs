@@ -24,6 +24,10 @@ class UsersController {
     res.json(userRepo.getAllUsers());
   }
 
+  dbquery() {
+    //
+  }
+
   User(req, res, next) {
     let id = parseInt(req.params.id);
     if (!userRepo.getAUser(id)) {
