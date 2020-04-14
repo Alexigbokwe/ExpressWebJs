@@ -1,15 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 require("module-alias/register");
-//const { scopePerRequest } = require("awilix-express");
+require("@config/database.js");
 
-//const container = require("./container/container");
 //Requiring the routes
 const userRoutes = require("./Routes/userRoutes/index");
 
 const app = express();
-
-// app.use(scopePerRequest(container));
 
 //Using the routes
 app.use("/api/user/", userRoutes);
