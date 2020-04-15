@@ -1,18 +1,23 @@
 Setup
-# Express js boiler plate
 
-Express js boiler plate helps you set up a well organised Node Express application.
+# Expressweb.js
+
+Expresswebjs is an Express js boiler plate which helps developers and software enginners set up and develop a well organised Node Express application.
 
 ---
+
 ## Requirements
 
-For development, you will only need Node.js,express, body-parser and nodemon installed in your environement.
+Before installing, download and install Node.js. Node.js 0.10 or higher is required.
+
+If this is a brand new project, make sure to create a package.json first with the npm init command.
 
 ### Node
+
 - #### Node installation on Windows
 
   Just go on [official Node.js website](https://nodejs.org/) and download the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+  Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
 
 - #### Node installation on Ubuntu
 
@@ -37,8 +42,10 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ npm install npm -g
 
 ###
+
 ### Yarn installation
-  After installing node, this project will need npm too, so just run the following command.
+
+After installing node, this project will need npm too, so just run the following command.
 
       $ npm install -g
 
@@ -52,15 +59,17 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ##Database Setup
 
-    $ rename env.example.js to env.js
-    
-## Configure app
+    $ rename example.env to .env
 
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
+## Features
 
-- A setting;
-- Another setting;
-- One more setting;
+- Robust routing
+- Focus on high performance
+- Super-high test coverage
+- HTTP helpers (redirection, caching, etc)
+- Support for both SQL and NOSQL database
+- Well organised and structured.
+- Highly scalable
 
 ## Running the project
 
@@ -69,5 +78,3 @@ Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 ## Simple build for production
 
     $ npm build
-    
-    

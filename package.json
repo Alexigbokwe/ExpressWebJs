@@ -1,7 +1,7 @@
 {
-  "name": "expressproject",
+  "name": "expressweb-api-app",
   "version": "1.0.0",
-  "description": "my first express app",
+  "description": "The api application boilerplate for Expresswebjs",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
