@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 require("module-alias/register");
-require("@config/database.js");
+require("@config/database");
+require("@path/path");
 
 //Requiring the routes
 const userRoutes = require("./Routes/userRoutes/index");

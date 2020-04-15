@@ -9,6 +9,8 @@ Route.get("/allUsers", UserController.allUsers);
 
 Route.get("/myName", AnotherController.getMyName);
 
+Route.get("/dbUsers", UserController.dbquery);
+
 Route.get("/:id", UserController.User);
 
 module.exports = Route;

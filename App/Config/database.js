@@ -32,6 +32,9 @@ const dbConnection = () => {
   | Here we define connection settings for MySQL database.
   |
   | npm i --save mysql
+  | 
+  | Using sequelize 
+  | npm install --save mysql2
   |
   */
   const mysql = {
@@ -52,16 +55,35 @@ const dbConnection = () => {
   | Here we define connection settings for PostgreSQL database.
   |
   | npm i --save pg
+  | 
+  | Using sequelize 
+  | npm install --save pg pg-hstore
   |
   */
   const pg = {
-    client: "pg",
+    client: "Postgre",
     connection: {
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE
+    }
+  };
+  /*
+  |--------------------------------------------------------------------------
+  | MongoDB
+  |--------------------------------------------------------------------------
+  |
+  | Here we define connection settings for MongoDB database.
+  |
+  | npm i --save mongoose
+  |
+  */
+  const mongoose = {
+    client: "mongoose",
+    connection: {
+      connection_link: `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
     }
   };
 
