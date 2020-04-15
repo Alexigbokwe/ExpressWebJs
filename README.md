@@ -57,7 +57,7 @@ After installing node, this project will need npm too, so just run the following
     $ cd PROJECT_TITLE
     $ npm install
 
-##Database Setup
+## Database Setup
 
     $ rename example.env to .env
 
@@ -78,3 +78,7 @@ After installing node, this project will need npm too, so just run the following
 ## Simple build for production
 
     $ npm build
+
+# Security Vulnerabilities
+
+If you discover a security vulnerability within Expressweb, please send an e-mail to Alex Igbokwe via juvitafrica@gmail.com. All security vulnerabilities will be promptly addressed.
