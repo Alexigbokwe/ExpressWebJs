@@ -2,7 +2,7 @@ Setup
 
 # Expressweb.js
 
-Expresswebjs is an Express js boiler plate which helps developers and software enginners set up and develop a well organised Node Express application.
+Expresswebjs is a Node js FrameWork with expressive and organised syntax.It helps software developers and engineers set up and develop a well organised Node application, taking the pain out of development by easing common tasks used in many web projects.
 
 ---
 
