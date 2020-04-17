@@ -21,6 +21,8 @@ containerFunction = () => {
     }
   );
 
+  //container.loadModules([],)
+
   return container;
 };
 

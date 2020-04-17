@@ -3,14 +3,12 @@ const HttpError = require("@middleware/HttpError");
 const BaseController = require("@baseController/controller");
 const userRepo = require("container").resolve("userRepository");
 
-class AnotherController extends BaseController {
+class UserController extends BaseController {
   /**
    * Display a listing of the resource.
-   *
-   * @return Response
    */
-  async index(res) {
-    //
+  async index(req, res, next) {
+    return await userRepo.getAllUsers(res);
   }
 
   /**
@@ -18,7 +16,7 @@ class AnotherController extends BaseController {
    *
    * @return Response
    */
-  async create(res) {
+  create(req, res, next) {
     //
   }
 
@@ -38,8 +36,8 @@ class AnotherController extends BaseController {
    * @param  int  id
    * @return Response
    */
-  async show(res, id) {
-    //
+  async show(req, res, id) {
+    return res.json(id);
   }
 
   /**
@@ -48,7 +46,7 @@ class AnotherController extends BaseController {
    * @param  int  id
    * @return Response
    */
-  async edit(res, id) {
+  async edit(req, res, id) {
     //
   }
 
@@ -59,7 +57,7 @@ class AnotherController extends BaseController {
    * @param  int  id
    * @return Response
    */
-  async update(req, id) {
+  async update(req, res, id) {
     //
   }
 
@@ -69,9 +67,9 @@ class AnotherController extends BaseController {
    * @param  int  id
    * @return Response
    */
-  async destroy(res, id) {
+  async destroy(req, res, id) {
     //
   }
 }
 
-module.exports = new AnotherController();
+module.exports = new UserController();

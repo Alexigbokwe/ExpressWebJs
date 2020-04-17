@@ -1,5 +1,5 @@
 "use strict";
-const DatabaseConnection = require("container").resolve("connection");
+const DatabaseConnection = require("@databaseSucket/connection");
 require("dotenv").config();
 
 const dbConnection = () => {

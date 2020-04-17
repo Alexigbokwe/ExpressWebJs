@@ -26,6 +26,9 @@
   "_moduleAliases": {
     "@root": ".",
     "@config": "./App/Config",
+    "@baseController": "./Vendor/Controller",
+    "@databaseSucket": "./Vendor/Framework/Database",
+    "@middleware": "./App/Http/Middleware",
     "@path": "./container",
     "@controller": "./App/Http/Controller/",
     "@my_module": "lib/some-file.js",

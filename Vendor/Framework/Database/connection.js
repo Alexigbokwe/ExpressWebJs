@@ -78,4 +78,4 @@ class DatabaseConnection {
   }
 }
 
-module.exports = DatabaseConnection;
+module.exports = new DatabaseConnection();
