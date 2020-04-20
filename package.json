@@ -28,6 +28,7 @@
     "@config": "./App/Config",
     "@baseController": "./Vendor/Controller",
     "@databaseSucket": "./Vendor/Framework/Database",
+    "@cors": "./Vendor/Framework/Cors/src/",
     "@middleware": "./App/Http/Middleware",
     "@path": "./container",
     "@controller": "./App/Http/Controller/",

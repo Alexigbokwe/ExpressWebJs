@@ -3,16 +3,21 @@ const bodyParser = require("body-parser");
 require("module-alias/register");
 require("@config/database");
 require("@path/path");
+const Cors = new (require("@cors"))();
 
 //Requiring the routes
 const userRoutes = require("./Routes/userRoutes/index");
 
 const app = express();
 
+app.use((req, res, next) => {
+  Cors.handle(req, res, next);
+});
+
 //Using the routes
 app.use("/api/user/", userRoutes);
 
-//this error handling middleware must be at the last section
+//error handling middleware must be at the last section
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
