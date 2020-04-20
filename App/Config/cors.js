@@ -3,7 +3,7 @@
 module.exports = {
   /*
     |--------------------------------------------------------------------------
-    | Origin
+    | Origin   
     |--------------------------------------------------------------------------
     |
     | Set a list of origins to be allowed. The value can be one of the following
