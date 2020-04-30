@@ -16,7 +16,7 @@ class UserController extends BaseController {
    *
    * @return Response
    */
-  create(req, res, next) {
+  async create(req, res, next) {
     //
   }
 
