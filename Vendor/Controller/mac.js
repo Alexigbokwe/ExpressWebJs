@@ -3,7 +3,7 @@ class Mac {
     this.name();
   }
   name() {
-    console.log("Base controller services");
+    //console.log("Base controller services");
   }
 }
 

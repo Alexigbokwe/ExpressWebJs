@@ -26,6 +26,7 @@
   "_moduleAliases": {
     "@root": ".",
     "@config": "./App/Config",
+    "@providers": "./App/Providers",
     "@baseController": "./Vendor/Controller",
     "@databaseSucket": "./Vendor/Framework/Database",
     "@cors": "./Vendor/Framework/Cors/src/",
@@ -33,7 +34,8 @@
     "@path": "./container",
     "@controller": "./App/Http/Controller/",
     "@my_module": "lib/some-file.js",
-    "something": "src/foo"
+    "@api": "./Vendor/Framework/Route/",
+    "@route": "./Routes"
   },
   "_moduleDirectories": [
     "container"

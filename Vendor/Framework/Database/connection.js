@@ -24,11 +24,11 @@ class DatabaseConnection {
           max: 5,
           min: 0,
           acquire: 30000,
-          idle: 10000
+          idle: 10000,
         },
 
         // SQLite only
-        storage: "path/to/database.sqlite"
+        storage: "path/to/database.sqlite",
 
         //operatorsAliases: false
       }
@@ -45,9 +45,9 @@ class DatabaseConnection {
     }
 
     con = mysql.createConnection(database.connection);
-    con.connect(function(err) {
+    con.connect(function (err) {
       if (err) throw err;
-      console.log("DB Connected!");
+      //console.log("DB Connected!");
     });
     this.sequelizeORM("mysql", database.connection);
     global.db = con;
@@ -68,7 +68,7 @@ class DatabaseConnection {
 
   mongo(database) {
     var mongoose = require("mongoose");
-    mongoose.connect(database.connection.connection_link, function(err, db) {
+    mongoose.connect(database.connection.connection_link, function (err, db) {
       if (err) throw err;
       console.log("DB Connected!");
       con = db;
