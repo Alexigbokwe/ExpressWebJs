@@ -1,5 +1,10 @@
-const express = require("express");
-const app = express();
 //Require routes path
 
-//Use routes
+class useRoute {
+  constructor(app) {
+    this.app = app;
+    //Use routes
+  }
+}
+
+module.exports = useRoute;
