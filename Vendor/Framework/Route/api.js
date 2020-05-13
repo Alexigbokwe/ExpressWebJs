@@ -3,13 +3,14 @@ const Cors = new (require("@cors"))();
 const app = express();
 class Api {
   _body(param) {
-    new (require("@providers/Route"))(app);
+    global.serverApp = app;
+    require("@providers/Route");
 
-    app.use((req, res, next) => {
+    serverApp.use((req, res, next) => {
       Cors.handle(req, res, next);
     });
 
-    app.use((error, req, res, next) => {
+    serverApp.use((error, req, res, next) => {
       if (res.headerSent) {
         return next(error);
       }
@@ -18,7 +19,7 @@ class Api {
       res.json({ message: error.message || "An Unknown Error Occured" });
     });
 
-    app.listen(param);
+    serverApp.listen(param);
   }
 
   listen(param) {
