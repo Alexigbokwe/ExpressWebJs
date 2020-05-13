@@ -51,11 +51,27 @@ After installing node, this project will need npm too, so just run the following
 
 ---
 
-## Install
+## Installation
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
+## Install expresswebcli globally by running the command below
+
+    $ npm install -g expresswebcli
+
+## Once that is done, you can now create your project with the command below
+
+    $ expresswebcli new [PROJECT_NAME]
     $ cd PROJECT_TITLE
     $ npm install
+
+## To create your controller
+
+    $ expresswebcli make-controller [CONTROLLER_NAME] [--r]
+
+## To create route
+
+    $ expresswebcli make-route [ROUTE_NAME]
+
+## To see other commands please check https://www.npmjs.com/package/expresswebcli
 
 ## Database Setup
 
@@ -73,15 +89,11 @@ After installing node, this project will need npm too, so just run the following
 
 ## Running the project
 
-    $ npm start
-
-## Simple build for production
-
-    $ npm build
+    $ npm run start
 
 # Security Vulnerabilities
 
-If you discover a security vulnerability within Expressweb, please send an e-mail to Alex Igbokwe via juvitafrica@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Expressweb, please send an e-mail to Alex Igbokwe via chukwuemekaigbokwe80@gmail.com. All security vulnerabilities will be promptly addressed.
 
 # License
 
