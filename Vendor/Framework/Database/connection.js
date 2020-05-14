@@ -68,11 +68,30 @@ class DatabaseConnection {
 
   mongo(database) {
     var mongoose = require("mongoose");
-    mongoose.connect(database.connection.connection_link, function (err, db) {
-      if (err) throw err;
-      console.log("DB Connected!");
-      con = db;
-    });
+    var link = "";
+    if (!database.user && !database.password) {
+      link =
+        "mongodb://" +
+        database.host +
+        ":" +
+        database.port +
+        "/" +
+        database.database;
+    } else {
+      link = database.connection.connection_link;
+    }
+    mongoose.connect(
+      link,
+      {
+        useNewUrlParser: database.useNewUrlParser,
+        useUnifiedTopology: database.useUnifiedTopology,
+      },
+      function (err, db) {
+        if (err) throw err;
+        //console.log("DB Connected!");
+        con = db;
+      }
+    );
     global.db = con;
     return con;
   }
