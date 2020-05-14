@@ -56,7 +56,7 @@ After installing node, this project will need npm too, so just run the following
 ## Once that is done, you can now create your project with the command below
 
     $ expresswebcli new [PROJECT_NAME]
-    $ cd PROJECT_TITLE
+    $ cd PROJECT_NAME
     $ npm install
 
 ## To create your controller
