@@ -3,7 +3,7 @@ const awilix = require("awilix");
 
 containerFunction = () => {
   const container = awilix.createContainer({
-    injectionMode: awilix.InjectionMode.PROXY
+    injectionMode: awilix.InjectionMode.PROXY,
   });
 
   container.loadModules(
@@ -12,17 +12,11 @@ containerFunction = () => {
       resolverOptions: {
         injectionMode: InjectionMode.CLASSIC,
         lifetime: Lifetime.SINGLETON,
-        register: awilix.asClass
+        register: awilix.asClass,
       },
-      // We want to register `UserService` as `userService` -
-      // by default loaded modules are registered with the
-      // name of the file (minus the extension)
-      formatName: "camelCase"
+      formatName: "camelCase",
     }
   );
-
-  //container.loadModules([],)
-
   return container;
 };
 
