@@ -8,11 +8,7 @@ Expresswebjs is a Node FrameWork with expressive and organised syntax.It helps N
 
 ## Requirements
 
-Before installing, download and install Node.js. Node.js 0.10 or higher is required.
-
-If this is a brand new project, make sure to create a package.json first with the npm init command.
-
-### Node
+    Node
 
 - #### Node installation on Windows
 
@@ -70,6 +66,10 @@ After installing node, this project will need npm too, so just run the following
 ## To create route
 
     $ expresswebcli make-route [ROUTE_NAME]
+
+## To create nosql model
+
+    $ expresswebcli make-nosql-model [MODEL_NAME]
 
 ## To see other commands please check https://www.npmjs.com/package/expresswebcli
 
