@@ -33,7 +33,7 @@
     "@middleware": "./App/Http/Middleware",
     "@path": "./container",
     "@controller": "./App/Http/Controller/",
-    "@my_module": "lib/some-file.js",
+    "@model": "App/Model",
     "@api": "./Vendor/Framework/Route/",
     "@route": "./Routes"
   },

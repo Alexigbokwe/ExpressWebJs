@@ -44,8 +44,8 @@ const dbConnection = () => {
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE
-    }
+      database: process.env.DB_DATABASE,
+    },
   };
   /*
   |--------------------------------------------------------------------------
@@ -67,8 +67,8 @@ const dbConnection = () => {
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE
-    }
+      database: process.env.DB_DATABASE,
+    },
   };
   /*
   |--------------------------------------------------------------------------
@@ -82,9 +82,16 @@ const dbConnection = () => {
   */
   const mongoose = {
     client: "mongoose",
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    useNewUrlParser: process.env.DB_USENEWURLPARSER,
+    useUnifiedTopology: process.env.DB_USEUNIFIEDTOPOLOGY,
     connection: {
-      connection_link: `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
-    }
+      connection_link: `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`,
+    },
   };
 
   /*
@@ -93,7 +100,8 @@ const dbConnection = () => {
   |--------------------------------------------------------------------------
   |
   | Connection defines the default connection settings to be used while
-  | interacting with SQL databases.
+  | interacting with databases.
+  | list of connections : mysql, mongoose
   |
   */
   DatabaseConnection.connection(mysql);
