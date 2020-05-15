@@ -67,6 +67,10 @@ After installing node, this project will need npm too, so just run the following
 
     $ expresswebcli make-route [ROUTE_NAME]
 
+## To create authentication
+
+    $ expresswebcli make-nosql-auth
+
 ## To create nosql model
 
     $ expresswebcli make-nosql-model [MODEL_NAME]
