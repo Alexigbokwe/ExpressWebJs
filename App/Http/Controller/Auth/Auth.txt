@@ -1,0 +1,3 @@
+ To get your authentication up and running, run the command below
+
+ expresswebcli make-nosql-auth   if you are using nosql database
