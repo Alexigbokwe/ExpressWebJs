@@ -75,8 +75,6 @@ After installing node, this project will need npm too, so just run the following
 
     $ expresswebcli make-nosql-model [MODEL_NAME]
 
-## To see other commands please check https://www.npmjs.com/package/expresswebcli
-
 ## Database Setup
 
     $ rename example.env to .env
