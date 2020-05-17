@@ -1,9 +1,7 @@
 "use strict";
-const DatabaseConnection = require("@databaseSucket/connection");
-require("dotenv").config();
 
-const dbConnection = () => {
-  /*
+module.exports = {
+  /* 
   |--------------------------------------------------------------------------
   | MySQL
   |--------------------------------------------------------------------------
@@ -16,7 +14,7 @@ const dbConnection = () => {
   | npm install --save mysql2
   |
   */
-  const mysql = {
+  mysql: {
     client: "mysql",
     connection: {
       host: process.env.HOST_NAME,
@@ -25,7 +23,7 @@ const dbConnection = () => {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
     },
-  };
+  },
   /*
   |--------------------------------------------------------------------------
   | PostgreSQL
@@ -39,7 +37,7 @@ const dbConnection = () => {
   | npm install --save pg pg-hstore
   |
   */
-  const pg = {
+  pg: {
     client: "Postgre",
     connection: {
       host: process.env.DB_HOST,
@@ -48,7 +46,7 @@ const dbConnection = () => {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
     },
-  };
+  },
   /*
   |--------------------------------------------------------------------------
   | MongoDB
@@ -59,7 +57,7 @@ const dbConnection = () => {
   | npm i --save mongoose
   |
   */
-  const mongoose = {
+  mongoose: {
     client: "mongoose",
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
@@ -71,7 +69,7 @@ const dbConnection = () => {
     connection: {
       connection_link: `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`,
     },
-  };
+  },
 
   /*
   |--------------------------------------------------------------------------
@@ -83,7 +81,5 @@ const dbConnection = () => {
   | list of connections : mysql, mongoose
   |
   */
-  DatabaseConnection.connection(mysql);
+  Default_connection: "mongoose",
 };
-
-module.exports = dbConnection();

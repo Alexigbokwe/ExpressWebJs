@@ -1,5 +1,6 @@
 const express = require("express");
 const Cors = new (require("@cors"))();
+require("../Database/src/index");
 const app = express();
 class Api {
   _body(param) {
