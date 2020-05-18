@@ -4,6 +4,10 @@ Setup
 
 Expresswebjs is a Node FrameWork with expressive and organised syntax.It helps Node developers set up and structure their project in an object oriented way so as to enable code reuse. ExpressWebjs takes the pain out of development by easing common tasks (Environment Setup, Code Structure, Robust routing) used in many web projects. It supports both SQL and NOSQL databases.
 
+## join our community on slack
+
+    expresswebjs.slack.com
+
 ---
 
 ## Requirements
