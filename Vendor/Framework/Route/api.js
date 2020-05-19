@@ -1,4 +1,5 @@
 const express = require("express");
+require("@path/path");
 const Cors = new (require("@cors"))();
 require("../Database/src/index");
 const app = express();
