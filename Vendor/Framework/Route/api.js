@@ -2,11 +2,13 @@ const express = require("express");
 const Cors = new (require("@cors"))();
 require("../Database/src/index");
 const app = express();
+
 class Api {
   _body(param) {
     global.serverApp = app;
+    require('@bodyParser');
     require("@providers/Route");
-
+  
     serverApp.use((req, res, next) => {
       Cors.handle(req, res, next);
     });
