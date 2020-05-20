@@ -304,4 +304,4 @@ class Cors {
   }
 }
 
-module.exports = Cors;
+module.exports = new Cors();
