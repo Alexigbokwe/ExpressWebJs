@@ -79,6 +79,14 @@ After installing node, this project will need npm too, so just run the following
 
     $ expresswebcli make-nosql-model [MODEL_NAME]
 
+## To create event
+
+    $ expresswebcli make-event [EVENT_NAME]
+
+## To create listener
+
+    $ expresswebcli make-listener [LISTENER_NAME]
+
 ## Database Setup
 
     $ rename example.env to .env
