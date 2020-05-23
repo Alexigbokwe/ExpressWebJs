@@ -64,6 +64,7 @@ module.exports = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
+    useCreateIndex: process.env.DB_USECREATEINDEX,
     useNewUrlParser: process.env.DB_USENEWURLPARSER,
     useUnifiedTopology: process.env.DB_USEUNIFIEDTOPOLOGY,
     connection: {

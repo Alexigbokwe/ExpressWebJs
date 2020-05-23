@@ -65,6 +65,7 @@ class DatabaseConnection {
     mongoose.connect(
       link,
       {
+        useCreateIndex: database.useCreateIndex,
         useNewUrlParser: database.useNewUrlParser,
         useUnifiedTopology: database.useUnifiedTopology,
       },

@@ -1,6 +1,6 @@
 {
   "name": "expressweb-api-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The api application boilerplate for Expresswebjs",
   "main": "app.js",
   "scripts": {
@@ -36,7 +36,11 @@
     "@controller": "./App/Http/Controller/",
     "@model": "App/Model",
     "@api": "./Vendor/Framework/Route/",
-    "@route": "./Routes"
+    "@route": "./Routes",
+    "@bodyParser": "./Vendor/Framework/BodyParser/src/index.js",
+    "@events": "./App/Events",
+    "@listeners": "./App/Listeners",
+    "@emitter": "./Vendor/Framework/Events/src/index"
   },
   "_moduleDirectories": [
     "container"
