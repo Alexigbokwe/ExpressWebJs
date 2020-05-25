@@ -1,6 +1,6 @@
 {
   "name": "expressweb-api-app",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "The api application boilerplate for Expresswebjs",
   "main": "app.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "expresswebcore": "^1.0.1",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
     "mongoose": "^5.9.15",
@@ -23,24 +24,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  },
-  "_moduleAliases": {
-    "@root": ".",
-    "@config": "./App/Config",
-    "@providers": "./App/Providers",
-    "@baseController": "./Vendor/Controller",
-    "@databaseSucket": "./Vendor/Framework/Database",
-    "@cors": "./Vendor/Framework/Cors/src/",
-    "@middleware": "./App/Http/Middleware",
-    "@path": "./container",
-    "@controller": "./App/Http/Controller/",
-    "@model": "App/Model",
-    "@api": "./Vendor/Framework/Route/",
-    "@route": "./Routes",
-    "@bodyParser": "./Vendor/Framework/BodyParser/src/index.js",
-    "@events": "./App/Events",
-    "@listeners": "./App/Listeners",
-    "@emitter": "./Vendor/Framework/Events/src/index"
   },
   "_moduleDirectories": [
     "container"

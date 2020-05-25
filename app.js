@@ -1,3 +1,2 @@
-require("module-alias/register");
-const API = require("@api/api");
-API.listen(5100);
+const API = require("expresswebcore/Route");
+API.listen(5200);

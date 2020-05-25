@@ -1,6 +1,5 @@
 "use strict";
-const express = require("express");
-const Route = express.Router();
+const Route = use("@router");
 /*
     |--------------------------------------------------------------------------
     | Welcome route   
@@ -11,9 +10,8 @@ const Route = express.Router();
     | 
     */
 
-Route.get("/", (req,res)=>{
-    res.json({"Message":"Welcome To ExpressWebjs"})
+Route.get("/", (req, res) => {
+  res.json({ Message: "Welcome To ExpressWebjs" });
 });
-
 
 module.exports = Route;
