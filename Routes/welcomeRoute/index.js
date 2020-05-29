@@ -1,5 +1,5 @@
 "use strict";
-const Route = use("@router");
+const Route = require("@router");
 const at = require("@controllerBox");
 /*
     |--------------------------------------------------------------------------
