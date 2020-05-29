@@ -14,14 +14,12 @@ module.exports = {
 | you can do this: 
 | const myUserService = use('userService'); 
 |
+| Note: this is only applicable for classes without constructor
+|
 | Where userService is the service file name userService.js
 |
 */
-  resolverBox: [
-    "./App/Http/Controller/**/**/*.js",
-    "./App/Service/**/**/*.js",
-    "./App/Repository/**/**/*.js",
-  ],
+  resolverBox: ["./App/Service/**/**/*.js", "./App/Repository/**/**/*.js"],
 
   /*
 |--------------------------------------------------------------------------
