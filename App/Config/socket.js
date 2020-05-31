@@ -2,9 +2,9 @@
 
 /*
 |--------------------------------------------------------------------------
-| Websocket Config  
+| Socket.io Config  
 |--------------------------------------------------------------------------
-| npm i --save ws
+| npm i --save socket.io
 */
 module.exports = {
   /*
@@ -12,75 +12,78 @@ module.exports = {
   | Path
   |--------------------------------------------------------------------------
   |
-  | The base path on which the websocket server will accept connections.
+  | The base path on which the socket.io server will accept connections.
   | Type {String}
   */
   path: "/expressweb-ws",
 
   /*
   |--------------------------------------------------------------------------
-  | Host
+  | Serve Client
   |--------------------------------------------------------------------------
   |
-  | The hostname where to bind the server.
-  | Type {String}
+  | Whether to serve the client files
+  | Type {Boolean} 
   */
-  host: "localhost",
+  serveClient: true,
 
   /*
   |--------------------------------------------------------------------------
-  | Port
+  | Ping Timeout
   |--------------------------------------------------------------------------
   |
-  | The port where to bind the server.
+  | How many ms without a pong packet to consider the connection closed
   | Type {Number}
   */
-  port: "3000",
+  pingTimeout: 5000,
 
   /*
   |--------------------------------------------------------------------------
-  | Server Interval
+  | Ping Interval
   |--------------------------------------------------------------------------
   |
-  | This interval is used to create a timer for identifying dead client
-  | connections.
+  | How many ms before sending a new ping packet
   |
   */
-  serverInterval: 30000,
+  pingInterval: 25000,
 
   /*
   |--------------------------------------------------------------------------
-  | Server Attempts
+  | Upgrade Timeout
   |--------------------------------------------------------------------------
   |
-  | Server attempts are used with serverInterval to identify dead client
-  | connections. A total of `serverAttempts` attmepts after `serverInterval`
-  | will be made before terminating the client connection.
+  | How many ms before an uncompleted transport upgrade is cancelled
   |
   */
-  serverAttempts: 3,
+  upgradeTimeout: 10000,
 
   /*
   |--------------------------------------------------------------------------
-  | Auto Accept Connections
+  | MaxHttpBufferSize	
   |--------------------------------------------------------------------------
   |
-  | You should not use autoAcceptConnections for production
-  | applications, as it defeats all standard cross-origin protection
-  | facilities built into the protocol and the browser.  You should
-  | *always* verify the connection's origin and decide whether or not
-  | to accept it.
+  | How many bytes or characters a message can be, before closing the session (to avoid DoS).
   |
   */
-  autoAcceptConnections: false,
+  maxHttpBufferSize: 10e7,
 
   /*
   |--------------------------------------------------------------------------
-  | Http Server
+  | Transports
   |--------------------------------------------------------------------------
-  | This is the server the websocket will run on. 
-  | Leave it to serverApp to run with the the current server.
+  |
+  | Transports to allow connections to
   |
   */
-  httpServer: serverApp,
+  transports: ["polling", "websocket"],
+
+  /*
+  |--------------------------------------------------------------------------
+  | AllowUpgrades	
+  |--------------------------------------------------------------------------
+  |
+  | Whether to allow transport upgrades
+  |
+  */
+  allowUpgrades: true,
 };
