@@ -66,7 +66,10 @@ Once installed, you can use the expresswebcli new command to create fresh instal
 For example, to create a new application called ritetech, simply:
 
     expresswebcli new ritetech
-    cd PROJECT_NAME
+
+Once that is done,
+
+    cd ritetech
 
 Once you do that, you can now install all dependencies by running npm install.
 
