@@ -99,6 +99,7 @@ After installing node, this project will need npm too, so just run the following
 - HTTP helpers (redirection, caching, etc)
 - Support for both SQL and NOSQL database
 - Well organised and structured.
+- Supports websocket
 - Highly scalable
 
 ## Running the project
