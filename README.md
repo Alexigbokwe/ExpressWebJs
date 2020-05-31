@@ -191,6 +191,98 @@ You can also bind a route to a controller using a controller@method signature:
 
 The above signature UserController@index refers to the App/Http/Controller/UserController.js file index method.
 
+## WebSocket
+
+ExpressWebJS offers a robust WebSocket Provider to serve real-time apps.
+
+The server works on pure WebSocket connections (supported by all major browsers) and scales naturally within a cluster of Node.js processes.
+
+## Basic Example
+
+Let’s build a single room chat server for user messaging.
+
+    expresswebcli make-ws-controller chatController
+
+This will generate our chatController class inside App/Http/Controller/Ws
+Our chatController class looks like this:
+
+        "use strict";
+        const WsBaseController = require("@WsBaseController");
+
+        class chatController extends WsBaseController {
+        constructor(socket) {
+            super(socket);
+        }
+
+        onMessage(data) {
+            // same as: socket.on('message')
+            console.log(data);
+        }
+
+        onClose() {
+            // same as: socket.on('close')
+        }
+
+        onError() {
+            // same as: socket.on('error')
+        }
+        }
+
+        module.exports = chatController;
+
+## Event Methods
+
+    class ChatController {
+        onMessage () {
+            // same as: socket.on('message')
+        }
+
+        onClose () {
+            // same as: socket.on('close')
+        }
+
+        onError () {
+            // same as: socket.on('error')
+        }
+    }
+
+Note: Event methods must be prefixed with the on keyword.
+
+To keep things simple we won’t store user messages, just deliver them.
+Open the Routes/sockets.js file and paste the following code:
+
+    const Ws = require("@socket.io");
+
+    Ws.channel("chat", "chatController");
+
+We can also bind a closure to the Ws.channel method, but having a dedicated controller is the recommended practice.
+
+## Client Code
+
+Let’s switch from server to client and subscribe to the chat channel.
+
+     <!DOCTYPE html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Socket.io test</title>
+    </head>
+    <body>
+        <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+        <script>
+        const socket = io.connect("http://localhost:5000/", {
+            path: "/expressweb-ws",
+        });
+        socket.to('chat').emit("message", [{ name: "Welcome to my Chat room" }]);
+        socket.on("message", (data) => {
+            console.log(data);
+        });
+        </script>
+    </body>
+    </html>
+
 ## ExpressWebJS Features
 
 - Robust routing
