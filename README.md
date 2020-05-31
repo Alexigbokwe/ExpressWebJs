@@ -128,14 +128,13 @@ The config directory is used to define the configuration of your application. Ex
 ## app/Http/Controller
 
 The app/Http/Controller directory is used to store all your Http and WebSocket controllers. This directory is automatically created when you run:
+for http controller:
 
     expresswebcli make-controller [CONTROLLER_NAME] [--r]
 
-for http controller or
+for websocket controller:
 
     expresswebcli make-ws-controller [CONTROLLER_NAME]
-
-for websocket controller
 
 ## app/Events
 
