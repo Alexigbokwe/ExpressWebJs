@@ -1,5 +1,5 @@
 //Require routes path
-const welcomeRoute = require("@route/welcomeRoute");
+const api = require("@route/api");
 
 //Use routes
-serverApp.use("/api/", welcomeRoute);
+serverApp.use("/api/", api);

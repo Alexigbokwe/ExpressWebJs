@@ -116,7 +116,7 @@ A standard Expresswebjs installation looks something like so:
         ├── Migrations
         ├── Seeds
     ├── Routes
-        ├── WelcomeRoute
+        ├── api.js
         ├── sockets.js
     ├── app.js
     ├── .env
@@ -159,9 +159,9 @@ The app/Model directory is used to store all your models. This directory is auto
 
 Other Commands are:
 
-## To create route
+## To create new route folder
 
-    expresswebcli make-route [ROUTE_NAME]
+    expresswebcli make-route [ROUTE_NAME] [ROUTE_PATH]
 
 ## To create authentication
 
