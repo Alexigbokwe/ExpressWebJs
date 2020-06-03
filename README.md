@@ -189,7 +189,7 @@ You can also bind a route to a controller using a controller@method signature:
 
     Route.get('users', at('UserController.index'))
 
-The above signature UserController@index refers to the App/Http/Controller/UserController.js file index method.
+The above signature UserController.index refers to the App/Http/Controller/UserController.js file index method.
 
 ## WebSocket
 
