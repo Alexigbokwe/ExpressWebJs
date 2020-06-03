@@ -185,7 +185,7 @@ The most basic route binding requires a URL and a closure:
 
 The return value of the closure will be sent back to the client as a response.
 
-You can also bind a route to a controller using a controller@method signature:
+You can also bind a route to a controller using a controller.method signature:
 
     Route.get('users', at('UserController.index'))
 
