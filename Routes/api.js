@@ -1,6 +1,5 @@
 "use strict";
 const { Route, at } = require("@router");
-//const at = require("@controllerBox");
 /*
     |--------------------------------------------------------------------------
     | Api route   
