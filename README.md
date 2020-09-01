@@ -224,31 +224,31 @@ To create a migration, use the make-sql-migration command:
 
 The new migration will be placed in your database/migrations directory. Each migration file name contains a timestamp, which allows expresswebjs to determine the order of the migrations.
 
-To run your migrations
+## To run your migrations
 
     expresswebcli run-sql-migration
 
-To List both completed and pending migrations
+## To List both completed and pending migrations
 
     expresswebcli show-sql-list
 
-To rollback the last batch of migrations:
+## To rollback the last batch of migrations:
 
     expresswebcli sql-rollback
 
-To run the next migration that has not yet been run:
+## To run the next migration that has not yet been run:
 
     expresswebcli sql-rollup
 
-To run the specified migration that has not yet been run
+## To run the specified migration that has not yet been run
 
     expresswebcli sql-rollup [MIGRATION_NAME]
 
-To undo the last migration that was run
+## To undo the last migration that was run
 
     expresswebcli sql-rolldown
 
-To undo the specified migration that was run:
+## To undo the specified migration that was run:
 
     expresswebcli sql-rolldown [MIGRATION_NAME]
 
