@@ -153,7 +153,7 @@ The app/Listeners directory is used to store all event listeners. This directory
 
 ## app/Model
 
-The app/Model directory is used to store all your models. This directory is automatically created when you run for nosql
+The app/Model directory is used to store all your models. This directory is automatically created when you run
 
     expresswebcli make-nosql-model [MODEL_NAME]
 
