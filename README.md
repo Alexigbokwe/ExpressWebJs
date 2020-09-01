@@ -171,7 +171,7 @@ Before getting started, be sure to configure a database connection in .env file
 
 To get started, let's create a Users model. Models typically live in the app directory.
 
-The easiest way to create a model instance is using the make:model Artisan command:
+The easiest way to create a model instance is using the make-sql-model command:
 
     expresswebcli make-sql-model User
 
