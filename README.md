@@ -195,6 +195,7 @@ Now, let's look at an example User model, which we will use to retrieve and stor
     module.exports = User;
 
 ## Retrieving Models
+
 Once you have created a model and its associated database table, you are ready to start retrieving data from your database. Think of each model as a powerful query builder allowing you to fluently query the database table associated with the model. For example:
 
     let User = require("@model/User");
@@ -202,6 +203,7 @@ Once you have created a model and its associated database table, you are ready t
     const users = await User.query().findById(2);
 
 ## Adding Additional Constraints
+
 The query() method will return all of the results in the model's table. Since each model serves as a query builder, you may also add constraints to queries, and then use the get method to retrieve the results:
 
      const users = await User.query().select('age', 'firstName', 'lastName')
@@ -221,6 +223,14 @@ To create a migration, use the make-sql-migration command:
     expresswebcli make-sql-migration [MIGRATION_NAME]
 
 The new migration will be placed in your database/migrations directory. Each migration file name contains a timestamp, which allows expresswebjs to determine the order of the migrations.
+
+To run your migrations
+
+    expresswebcli run-sql-migration
+
+To List both completed and pending migrations
+
+    expresswebcli show-sql-list
 
 To rollback the last batch of migrations:
 
@@ -242,7 +252,7 @@ To undo the specified migration that was run:
 
     expresswebcli sql-rolldown [MIGRATION_NAME]
 
-Other Commands are:
+Other Interesting Commands:
 
 ## To create new route folder
 
