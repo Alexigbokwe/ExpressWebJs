@@ -65,11 +65,11 @@ Once installed, you can use the expresswebcli new command to create fresh instal
 
 For example, to create a new application called ritetech, simply:
 
-    expresswebcli new ritetech
+    expresswebcli new project_name
 
 Once that is done,
 
-    cd ritetech
+    cd project_name
 
 Once you do that, you can now install all dependencies by running npm install.
 
@@ -153,9 +153,94 @@ The app/Listeners directory is used to store all event listeners. This directory
 
 ## app/Model
 
-The app/Model directory is used to store all your models. This directory is automatically created when you run
+The app/Model directory is used to store all your models. This directory is automatically created when you run for nosql
 
     expresswebcli make-nosql-model [MODEL_NAME]
+
+Or
+
+    expresswebcli make-sql-model [MODEL_NAME] [--m]
+
+where --m or --migration is for creating a migration file with make-sql-model
+
+Expresswebjs provides a beautiful, simple ActiveRecord implementation for working with your sql database. Each database table has a corresponding "Model" which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table.
+
+Before getting started, be sure to configure a database connection in .env file
+
+## Defining Models
+
+To get started, let's create a Users model. Models typically live in the app directory.
+
+The easiest way to create a model instance is using the make:model Artisan command:
+
+    expresswebcli make-sql-model User
+
+If you would like to generate a database migration when you generate the model, you may use the --migration or --m option:
+
+    expresswebcli make-sql-model User --m
+
+    expresswebcli make-sql-model User --migration
+
+## Model Conventions
+
+Now, let's look at an example User model, which we will use to retrieve and store information from our users database table:
+
+    class User extends DB_MODEL {
+        static get tableName() {
+            return "users";
+        }
+        //
+    }
+
+    module.exports = User;
+
+## Retrieving Models
+Once you have created a model and its associated database table, you are ready to start retrieving data from your database. Think of each model as a powerful query builder allowing you to fluently query the database table associated with the model. For example:
+
+    let User = require("@model/User");
+
+    const users = await User.query().findById(2);
+
+## Adding Additional Constraints
+The query() method will return all of the results in the model's table. Since each model serves as a query builder, you may also add constraints to queries, and then use the get method to retrieve the results:
+
+     const users = await User.query().select('age', 'firstName', 'lastName')
+            .where('age', '>', 40)
+            .where('age', '<', 60)
+            .where('firstName', 'Jennifer')
+            .orderBy('lastName');
+
+## Migrations
+
+Migrations are like version control for your database, allowing your team to modify and share the application's database schema. Migrations are typically paired with schema builder to build your application's database schema. If you have ever had to tell a teammate to manually add a column to their local database schema, you've faced the problem that database migrations solve.
+
+## Generating Migrations
+
+To create a migration, use the make-sql-migration command:
+
+    expresswebcli make-sql-migration [MIGRATION_NAME]
+
+The new migration will be placed in your database/migrations directory. Each migration file name contains a timestamp, which allows expresswebjs to determine the order of the migrations.
+
+To rollback the last batch of migrations:
+
+    expresswebcli sql-rollback
+
+To run the next migration that has not yet been run:
+
+    expresswebcli sql-rollup
+
+To run the specified migration that has not yet been run
+
+    expresswebcli sql-rollup [MIGRATION_NAME]
+
+To undo the last migration that was run
+
+    expresswebcli sql-rolldown
+
+To undo the specified migration that was run:
+
+    expresswebcli sql-rolldown [MIGRATION_NAME]
 
 Other Commands are:
 
@@ -170,6 +255,10 @@ Other Commands are:
 ## To create nosql model
 
     expresswebcli make-nosql-model [MODEL_NAME]
+
+## To create sql model with migration
+
+    expresswebcli make-sql-model [NODEL_NAME] [--m]
 
 ## Routing
 

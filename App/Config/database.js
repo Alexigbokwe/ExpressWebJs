@@ -17,11 +17,16 @@ module.exports = {
   mysql: {
     client: "mysql",
     connection: {
-      host: process.env.HOST_NAME,
+      host: process.env.DB_HOST,
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
+    },
+    migrations: {
+      directory: __dirname + "/../../Database/Migrations/",
+      tableName: "migrations",
+      stub: __dirname + "/../../Database/Migrations/migrationLayout.stub",
     },
   },
   /*
@@ -38,13 +43,18 @@ module.exports = {
   |
   */
   pg: {
-    client: "Postgre",
+    client: "pg",
     connection: {
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
+    },
+    migrations: {
+      directory: __dirname + "/../../Database/Migrations/",
+      tableName: "migrations",
+      stub: __dirname + "/../../Database/Migrations/migrationLayout.stub",
     },
   },
   /*
@@ -82,5 +92,5 @@ module.exports = {
   | list of connections : mysql, mongoose
   |
   */
-  Default_connection: "mongoose",
+  Default_connection: process.env.DB_CONNECTION,
 };
