@@ -1,4 +1,5 @@
 const HttpError = require("@middleware/HttpError");
+var jwt = require("jsonwebtoken");
 require("dotenv").config();
 Auth = (req, res, next) => {
   const header = req.headers["authorization"];
