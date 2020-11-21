@@ -187,9 +187,8 @@ Now, let's look at an example User model, which we will use to retrieve and stor
 
     class User extends DB_MODEL {
         static get tableName() {
-            return "users";
+            return "users"; //users is the table name
         }
-        //
     }
 
     module.exports = User;
@@ -311,11 +310,12 @@ Our chatController class looks like this:
         class chatController extends WsBaseController {
         constructor(socket) {
             super(socket);
+            this.socket
         }
 
         onMessage(data) {
             // same as: socket.on('message')
-            console.log(data);
+            this.socket.emit("message", data);
         }
 
         onClose() {
@@ -390,6 +390,7 @@ Let’s switch from server to client and subscribe to the chat channel.
 - HTTP helpers (redirection, caching, etc)
 - Support for both SQL and NOSQL database
 - Well organised and structured.
+- Supports Use Of Dependency Injection
 - Supports websocket
 - Highly scalable
 
