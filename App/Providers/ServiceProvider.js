@@ -1,5 +1,4 @@
 const ioc = require("expressweb-ioc");
-const pathTo = process.env.PWD;
 class ServiceProvider {
   /**
    * Register application services.
