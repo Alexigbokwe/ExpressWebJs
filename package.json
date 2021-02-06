@@ -1,26 +1,33 @@
 {
   "name": "expressweb-api-app",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "The api application boilerplate for Expresswebjs version 1.0.1",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "prod": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "Lexigbokwe",
   "license": "ISC",
   "dependencies": {
+    "@forkjs/group-router": "^1.0.5",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "expresswebcore": "1.0.18",
-    "expressweb-ioc": "^1.0.3",
+    "expressweb-ioc": "1.0.3",
+    "expressweb-scheduler": "^1.0.6",
+    "expresswebcore": "^2.0.8",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.15",
-    "socket.io": "^2.3.0"
+    "maker-console": "^1.0.11",
+    "mongoose": "^5.11.9",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "socket.io": "^2.3.0",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   }
 }

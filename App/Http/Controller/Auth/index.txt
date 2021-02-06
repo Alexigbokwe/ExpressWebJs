@@ -1,0 +1,5 @@
+ To get your authentication up and running, run the command below
+
+ node maker make-nosql-auth   if you are using nosql database
+
+ node maker make-sql-auth if you are using sql database

@@ -1,9 +1,8 @@
 const app = require("./applicationBuilder");
 
 class StartUp {
-  boot() {
-    app.UseRouting();
+  static boot() {
     app.UseWebSocket();
   }
 }
-module.exports = new StartUp();
+module.exports = StartUp;
