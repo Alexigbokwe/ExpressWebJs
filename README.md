@@ -1,8 +1,7 @@
-<img src="https://expresswebjs.com/logo.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+<p align="center"><a href="https://expresswebjs.com" target="_blank"><img src="https://expresswebjs.com/logo.png" width="400"></a></p>
 
-# Introduction
+
+# About ExpressWebJs
 
 ExpressWebJs is a **Node FrameWork** with expressive and organised syntax that runs on all
 major operating systems. It provides the starting point for creating your node project, allowing
@@ -34,12 +33,6 @@ If you're a senior developer, ExpressWebJs gives you robust tools for real-time 
 * Queues
 * Task Scheduling
 
-## Running the project
-<code> npm run start </code>
-
-## License
-The ExpressWebJs framework is open-sourced software licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
 ## Join our slack community
 
 <code> expresswebjs.slack.com </code>
@@ -47,3 +40,7 @@ The ExpressWebJs framework is open-sourced software licensed under the [MIT Lice
 Our Github discussion page is available for questions and discussions
 
 [https://github.com/Alexigbokwe/ExpressWebJs/discussions](https://github.com/Alexigbokwe/ExpressWebJs/discussions)
+
+## License
+The ExpressWebJs framework is open-sourced software licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
