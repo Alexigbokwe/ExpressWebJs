@@ -24,7 +24,7 @@
     "mongoose": "^5.11.9",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
