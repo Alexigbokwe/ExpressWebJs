@@ -9,8 +9,7 @@ module.exports = {
   | Here we define connection settings for MySQL database.
   |
   | npm i --save mysql
-  | 
-  | Using sequelize 
+  |
   | npm install --save mysql2
   |
   */
@@ -37,8 +36,7 @@ module.exports = {
   | Here we define connection settings for PostgreSQL database.
   |
   | npm i --save pg
-  | 
-  | Using sequelize 
+  |
   | npm install --save pg pg-hstore
   |
   */

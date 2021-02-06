@@ -1,5 +1,7 @@
 "use strict";
-const { Route, at } = require("@router");
+const Route = require("@routerManager");
+// const Auth = require("@middleware/Auth");
+//const Book = require("@middleware/Book");
 /*
     |--------------------------------------------------------------------------
     | Api route   
@@ -14,4 +16,4 @@ Route.get("/", (req, res) => {
   res.json({ Message: "Welcome To ExpressWebjs" });
 });
 
-module.exports = Route;
+module.exports = Route.exec;

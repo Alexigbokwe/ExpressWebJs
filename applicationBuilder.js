@@ -1,11 +1,8 @@
 class ApplicationBuilder {
-  UseWebSocket() {
-   return require("@socketBuilder");
-  }
-
-  UseRouting() {
-    return require("@providers/Route");
+  static UseWebSocket() {
+    let ws = require("@socketBuilder");
+    return ws();
   }
 }
 
-module.exports = new ApplicationBuilder();
+module.exports = ApplicationBuilder;

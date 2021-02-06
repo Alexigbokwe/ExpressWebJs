@@ -86,4 +86,26 @@ module.exports = {
   |
   */
   allowUpgrades: true,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Socket Cors
+  |--------------------------------------------------------------------------
+  |
+  | Whether to allow transport upgrades
+  |
+  */
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: [
+      "Origin",
+      "Content-Type",
+      "Content-Length",
+      "Authorization",
+      "Accept",
+      "X-Requested-With",
+    ],
+    credentials: true,
+  },
 };

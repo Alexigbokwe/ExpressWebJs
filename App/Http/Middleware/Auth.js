@@ -1,27 +1,19 @@
-const HttpError = require("@middleware/HttpError");
-var jwt = require("jsonwebtoken");
-require("dotenv").config();
-Auth = (req, res, next) => {
-  const header = req.headers["authorization"];
-  if (typeof header !== "undefined") {
-    const bearer = header.split(" ");
-    const token = bearer[1];
+"use strict";
+const auth = require("../Controller/Auth/Auth");
 
-    jwt.verify(token, process.env.APP_KEY, (err, authorizedData) => {
-      if (err)
-        return res
-          .status(500)
-          .send({ auth: false, message: "Failed to authenticate token." });
-      res.json({
-        message: "Successful log in",
-        authorizedData,
-      });
-    });
-    next();
-  } else {
-    //If header is undefined return Forbidden (403)
-    res.json(new HttpError("Authentication field", 404));
+class AuthMiddleware {
+  async handle(req, res, next) {
+    let result = await auth.processAuthMW(req.headers["authorization"]);
+    if (result.type == "error") {
+      return res
+        .status(404)
+        .json({ auth: false, message: result.msg, payload: result.payload });
+    }
+
+    req.user = result.data;
+
+    await next();
   }
-};
+}
 
-module.exports = Auth;
+module.exports = AuthMiddleware;
