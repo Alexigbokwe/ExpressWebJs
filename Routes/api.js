@@ -1,7 +1,5 @@
 "use strict";
 const Route = require("@routerManager");
-// const Auth = require("@middleware/Auth");
-//const Book = require("@middleware/Book");
 /*
     |--------------------------------------------------------------------------
     | Api route   
