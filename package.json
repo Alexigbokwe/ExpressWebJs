@@ -20,7 +20,7 @@
     "expressweb-scheduler": "^1.0.6",
     "expresswebcore": "^2.0.11",
     "jsonwebtoken": "^8.5.1",
-    "maker-console": "^1.0.11",
+    "maker-console": "^1.0.13",
     "mongoose": "^5.11.9",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
