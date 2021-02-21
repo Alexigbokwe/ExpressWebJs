@@ -23,7 +23,7 @@ class RegisterController {
     if (validation.success) {
       return await this[create](req.body, res);
     } else {
-      return res.status(404).json(validation);
+      return res.status(422).json(validation);
     }
   };
 

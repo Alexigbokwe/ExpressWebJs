@@ -39,7 +39,7 @@ class LoginController {
         return res.status(200).send({ auth: true, token: token });
       })
       .catch((error) => {
-        return res.status(404).send({
+        return res.status(422).send({
           auth: false,
           msg: error.msg,
           error: error.payload,
