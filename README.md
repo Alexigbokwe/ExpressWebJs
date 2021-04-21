@@ -34,7 +34,7 @@ Our Github discussion page is available for questions and discussions
 [https://github.com/Alexigbokwe/ExpressWebJs/discussions](https://github.com/Alexigbokwe/ExpressWebJs/discussions)
 
 ## Security Vulnerabilities
-If you discover any security vulnerability within ExpressWebJs, please send an e-mail to Chukwuemeka Igbokwe via chukwuemekaigbokwe@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover any security vulnerability within ExpressWebJs, please send an e-mail to Chukwuemeka Igbokwe via chukwuemekaigbokwe80@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 The ExpressWebJs framework is open-sourced software licensed under the [MIT License](https://opensource.org/licenses/MIT).
