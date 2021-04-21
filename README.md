@@ -37,7 +37,7 @@ Our Github discussion page is available for questions and discussions
 
 Hi! I'm really excited that you are interested in contributing to ExpressWebjs. Before submitting your contribution, please make sure to take a moment and read through our contribution guidelines:
 
-- [Contribution Guildline](https://github.com/Alexigbokwe/ExpressWebJs/.github/CONTRIBUTION.md)
+- [Contribution Guildline](https://github.com/Alexigbokwe/ExpressWebJs/blob/master/.github/CONTRIBUTION.md)
 
 ## Security Vulnerabilities
 If you discover any security vulnerability within ExpressWebJs, please send an e-mail to Chukwuemeka Igbokwe via chukwuemekaigbokwe80@gmail.com. All security vulnerabilities will be promptly addressed.
