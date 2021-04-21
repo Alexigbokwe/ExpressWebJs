@@ -27,6 +27,9 @@ module.exports = {
       tableName: "migrations",
       stub: __dirname + "/../../Database/Migrations/migrationLayout.stub",
     },
+    seeds: {
+      directory: __dirname + "/../../Database/Seeds/",
+    },
   },
   /*
   |--------------------------------------------------------------------------
@@ -53,6 +56,9 @@ module.exports = {
       directory: __dirname + "/../../Database/Migrations/",
       tableName: "migrations",
       stub: __dirname + "/../../Database/Migrations/migrationLayout.stub",
+    },
+    seeds: {
+      directory: __dirname + "/../../Database/Seeds/",
     },
   },
   /*
