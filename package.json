@@ -19,11 +19,12 @@
     "expressweb-scheduler": "^1.0.6",
     "expresswebcore": "^2.0.11",
     "jsonwebtoken": "^8.5.1",
-    "maker-console": "^1.0.14",
+    "maker-console": "^1.0.19",
     "mongoose": "^5.11.9",
+    "mongoose-unique-validator": "^2.0.3",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
-    "socket.io": "^2.3.0",
+    "socket.io": "^4.1.2",
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
