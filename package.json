@@ -39,7 +39,7 @@
     "expressweb-scheduler-ts": "^1.0.2",
     "expresswebcorets": "^1.1.20",
     "expresswebjs-preset-ts": "^1.0.4",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "maker-console-ts": "^1.0.53",
     "module-alias": "^2.2.2",
     "mongoose": "^5.11.9",
