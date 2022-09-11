@@ -1,0 +1,34 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Env_1 = require("Elucidate/Env");
+exports.default = {
+    /*
+    |--------------------------------------------------------------------------
+    | Authenticator
+    |--------------------------------------------------------------------------
+    |
+    | ExpressWebJs does not support session state, incoming requests that
+    | you wish to authenticate must be authenticated via a stateless mechanism such as API tokens.
+    |
+    */
+    authenticator: "jwt",
+    /*
+    |--------------------------------------------------------------------------
+    | Jwt
+    |--------------------------------------------------------------------------
+    |
+    | The jwt authenticator works by passing a jwt token on each HTTP request
+    | via HTTP `Authorization` header.
+    |
+    */
+    jwt: {
+        model: "UserModel",
+        driver: "jwt",
+        uid: "email",
+        password: "password",
+        secret: (0, Env_1.env)("APP_KEY"),
+        options: {
+            expiresIn: 86400, //default is 86400 (24 hrs)
+        },
+    },
+};
