@@ -5,14 +5,18 @@
  */
 import { Migration } from "Elucidate/Database/Model";
 
-let tableName = "";
-exports.up = function (migration:Migration) {
+let tableName = "users";
+
+exports.up = function (migration: Migration) {
   return migration.schema.createTable(tableName, (table) => {
     table.increments("id");
+    table.string("username").notNullable();
+    table.string("email").unique().notNullable();
+    table.string("password").notNullable();
     table.timestamps(true, true);
   });
 };
 
-exports.down = function (migration:Migration) {
+exports.down = function (migration: Migration) {
   return migration.schema.dropTable(tableName);
 };
