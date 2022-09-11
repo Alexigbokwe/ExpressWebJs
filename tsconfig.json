@@ -1,0 +1,20 @@
+{
+  "extends": "./node_modules/expresswebjs-preset-ts/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./build",  
+    "rootDir": "./", 
+    "paths": {
+      "App/*":["./App/*"],
+      "Config/*":["./Config/*"],
+      "Database/*":["./Database/*"],
+      "Resources/*":["./Resources/*"],
+      "Routes/*":["./Routes/*"],
+      "Utils/*":["./Utils/*"],
+      "Elucidate/*":["./node_modules/expresswebcorets/lib/*"],
+    },
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+  }
+}

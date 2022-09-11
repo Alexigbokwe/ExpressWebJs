@@ -1,1 +1,1 @@
-Application model goes here
+Manage your application models in the Model directory
