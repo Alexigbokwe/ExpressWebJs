@@ -53,7 +53,7 @@
                                 {
                                 <div class="px-5">
                                     <% for(param in endPoint.request) { %>
-                                            <pre><code><%- JSON.stringify(param)%></code>:<code><%- JSON.stringify(endPoint.request[param])%></code></pre>
+                                            <pre><code><%- JSON.stringify(param)%></code>:<code><%- JSON.stringify(endPoint.request[param],undefined, 4)%></code></pre>
                                     <% } %>
                                 </div>
                                 }
@@ -64,7 +64,7 @@
                                 {
                                 <div class="px-5">
                                     <% for(param in endPoint.response) { %>
-                                            <pre><code><%- JSON.stringify(param)%></code>:<code><%- JSON.stringify(endPoint.response[param])%></code></pre>
+                                            <pre><code><%- JSON.stringify(param)%></code>:<code><%- JSON.stringify(endPoint.response[param],undefined, 4)%></code></pre>
                                     <% } %>
                                 </div>
                                 }

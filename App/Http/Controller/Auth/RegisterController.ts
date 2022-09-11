@@ -1,13 +1,13 @@
 import Hash from "Elucidate/Hashing/Hash";
-import FormRequest from "Elucidate/Validator/FormRequest";
 import { Request, Response } from "Elucidate/HttpContext";
 import HttpResponse from "Elucidate/HttpContext/ResponseType";
 import Authenticator from "Elucidate/Auth/Authenticator";
+import { dataType, RegisterValidation } from "App/Http/Requests/RegisterValidation";
 
 class RegisterController {
   protected Auth: Authenticator;
 
-  constructor(Authenticator:Authenticator) {
+  constructor(Authenticator: Authenticator) {
     this.Auth = Authenticator;
   }
 
@@ -21,26 +21,13 @@ class RegisterController {
     |
     */
   register = async (req: Request, res: Response) => {
-    let validation = await this.validator(req.body);
+    let validation = await RegisterValidation.validate<dataType>(req.body);
     if (validation.success) {
-      return await this.create(req.body, res);
+      return await this.create(validation.data, res);
     } else {
       return HttpResponse.BAD_REQUEST(res, validation);
     }
   };
-
-  /**
-   * Get a validator for an incoming registration request.
-   * @param {object} record
-   * @return Validator
-   */
-  private async validator(record: object) {
-    return await FormRequest.make(record, {
-      username: "required|string|max:255",
-      email: "required|string|email|max:255",
-      password: "required|string|min:8",
-    });
-  }
 
   /**
    * Create a new user instance after a valid registration.

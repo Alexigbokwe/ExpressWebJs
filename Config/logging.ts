@@ -40,7 +40,7 @@ export default {
       maxLogSize: 10240,
       backups: 3,
       flag: "w",
-      pattern: "%d %p %c %x{user} %m%n",
+      pattern: "yyyy-MM-dd",
     },
   },
 };

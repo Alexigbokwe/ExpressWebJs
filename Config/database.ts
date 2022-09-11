@@ -108,6 +108,34 @@ export default {
     },
   },
 
+  /* 
+  |--------------------------------------------------------------------------
+  | Redis Database
+  |--------------------------------------------------------------------------
+  |
+  | Here we define connection settings for Redis database.
+  |
+  | npm i --save ioredis
+  |
+  */
+  redis: {
+    client: env("REDIS_CLIENT", "default"),
+
+    default: {
+      host: env("REDIS_HOST", "127.0.0.1"),
+      port: env("REDIS_PORT", 6379),
+      password: env("REDIS_PASSWORD", null),
+      database: env("REDIS_DB", 0),
+    },
+
+    cache: {
+      host: env("REDIS_HOST", "127.0.0.1"),
+      port: env("REDIS_PORT", 6379),
+      password: env("REDIS_PASSWORD", null),
+      database: env("REDIS_DB", 0),
+    },
+  },
+
   /*
   |--------------------------------------------------------------------------
   | Default Connection

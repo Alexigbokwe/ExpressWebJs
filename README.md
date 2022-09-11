@@ -1,6 +1,8 @@
-<p align="center"><a href="https://expresswebjs.com" target="_blank"><img src="https://expresswebjs.com/logo.png" width="400"></a></p>
+<p align="center"><a href="https://expresswebjs.com" target="_blank"><img src="https://expresswebjs.com/static/media/Logo.9bc684b2.png" width="400"></a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/1280px-TypeScript_Logo_%28Blue%29.svg.png" width="50">
+</p>
 
-# About ExpressWebJs
+#
 
 ExpressWebJs is a **Node FrameWork** with expressive and organised syntax that runs on all
 major operating systems. It provides the starting point for creating your node project, allowing
@@ -36,6 +38,8 @@ ExpressWebJs is designed for building professional web applications.
 - Multi-tenancy
 
 ## Follow us on twitter @expresswebjs
+
+## Join ExpressWebJs Community on [Discord](https://discord.com/invite/vrPGZCgJuj) to chat with other engineers using using ExpressWebJs
 
 Our Github discussion page is available for questions and discussions
 
