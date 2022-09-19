@@ -1,9 +1,7 @@
-import Exception from "Elucidate/ExceptionHandler/BaseException";
+import RuntimeException from "Elucidate/ExceptionHandler/RuntimeException";
 
-export class AppError extends Exception {
-  message: string;
-  constructor(message: string, code: number) {
-    super(message, code);
-    this.message = message;
+export class AppError extends RuntimeException {
+  constructor(error: any, code: number) {
+    super(error, code);
   }
 }
