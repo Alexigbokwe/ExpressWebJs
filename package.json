@@ -35,7 +35,7 @@
     "expresswebcorets": "^2.0.13",
     "expresswebjs-preset-ts": "^1.0.4",
     "log4js": "^6.3.0",
-    "maker-console-ts": "^2.0.4",
+    "maker-console-ts": "^2.0.5",
     "module-alias": "^2.2.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
