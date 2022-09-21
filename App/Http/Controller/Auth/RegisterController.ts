@@ -1,14 +1,12 @@
 import Hash from "Elucidate/Hashing/Hash";
-import { Request, Response } from "Elucidate/HttpContext";
-import HttpResponse from "Elucidate/HttpContext/ResponseType";
+import { Request, Response } from "Config/http";
 import Authenticator from "Elucidate/Auth/Authenticator";
-import { dataType, RegisterValidation } from "App/Http/Requests/RegisterValidation";
+import { dataType, RegisterValidation } from "App/Http/Validation/RegisterValidation";
+import { BaseController } from "../BaseController";
 
-class RegisterController {
-  protected Auth: Authenticator;
-
-  constructor(Authenticator: Authenticator) {
-    this.Auth = Authenticator;
+class RegisterController extends BaseController {
+  constructor(private authenticator: Authenticator) {
+    super();
   }
 
   /*
@@ -23,27 +21,22 @@ class RegisterController {
   register = async (req: Request, res: Response) => {
     let validation = await RegisterValidation.validate<dataType>(req.body);
     if (validation.success) {
-      return await this.create(validation.data, res);
+      return await this.createUserInstance(validation.data, res);
     } else {
-      return HttpResponse.BAD_REQUEST(res, validation);
+      return this.response.BAD_REQUEST(res, { data: validation, status: false });
     }
   };
 
-  /**
-   * Create a new user instance after a valid registration.
-   * @param {object} data
-   * @param {Response} res
-   * @return User
-   */
-  private create = async (data: object, res: Response) => {
+  private createUserInstance = async (data: object, res: Response) => {
     data["password"] = await Hash.make(data["password"]);
-    return await this.Auth.createUser(data)
+    return await this.authenticator
+      .createUser(data)
       .then(async (user: any) => {
-        let token = await this.Auth.generateToken(user);
-        return HttpResponse.OK(res, { auth: true, token: token });
+        let token = await this.authenticator.generateToken(user);
+        return this.response.OK(res, { status: true, data: { token } });
       })
       .catch((err: { msg: any; payload: any }) => {
-        return HttpResponse.UNAUTHORIZED(res, {
+        return this.response.UNAUTHORIZED(res, {
           auth: false,
           msg: err.msg,
           error: err.payload,

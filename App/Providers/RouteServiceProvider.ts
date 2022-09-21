@@ -1,5 +1,5 @@
 import ServiceProvider from "Elucidate/Support/ServiceProvider";
-import IRoute from "Elucidate/Route/IRoute";
+import IRoute from "Elucidate/Route/RouteConfigServiceProvider";
 import ApplicationConfig from "Config/app";
 
 class RouteServiceProvider extends ServiceProvider {
@@ -9,7 +9,7 @@ class RouteServiceProvider extends ServiceProvider {
    * Default base route prefix is 'api'
    */
   boot() {
-    this.Route = this.app.use("RouteConfigServiceProvider");
+    this.Route = this.use("RouteConfigServiceProvider");
     this.Route.routePrefix(ApplicationConfig.routePrefix);
     return this.configureRateLimiting();
   }

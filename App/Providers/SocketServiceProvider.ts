@@ -9,7 +9,7 @@ class SocketServiceProvider extends ServiceProvider {
    */
   public async booted() {
     let socketConfig: any = config;
-    let server = new Server(this.app.use("ApplicationInstance"), socketConfig);
+    let server = new Server(this.use("ApplicationInstance"), socketConfig);
     server.on("connection", (socket) => {
       console.log("Socket connected");
       import("Routes/sockets").then((file) => {

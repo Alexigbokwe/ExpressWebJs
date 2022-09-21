@@ -1,13 +1,11 @@
-import { Request, Response } from "Elucidate/HttpContext";
-import HttpResponse from "Elucidate/HttpContext/ResponseType";
+import { Request, Response } from "Config/http";
 import Authenticator from "Elucidate/Auth/Authenticator";
-import { LoginValidation, dataType } from "App/Http/Requests/LoginValidation";
+import { LoginValidation, dataType } from "App/Http/Validation/LoginValidation";
+import { BaseController } from "../BaseController";
 
-class LoginController {
-  protected Auth: Authenticator;
-
-  constructor(Authenticator: Authenticator) {
-    this.Auth = Authenticator;
+class LoginController extends BaseController {
+  constructor(private authenticator: Authenticator) {
+    super();
   }
   /*
     |--------------------------------------------------------------------------
@@ -21,26 +19,21 @@ class LoginController {
   login = async (req: Request, res: Response) => {
     let validation = await LoginValidation.validate<dataType>(req.body);
     if (validation.success) {
-      return await this.processLogin(validation.data, res);
+      return await this.processLoginData(validation.data, res);
     } else {
-      return HttpResponse.BAD_REQUEST(res, validation);
+      return this.response.UNAUTHORIZED(res, { data: validation, status: false });
     }
   };
 
-  /**
-   * Process incoming login data.
-   * @param {object} data
-   * @param {Response} res
-   * @return User
-   */
-  private processLogin = async (data: object, res: Response) => {
-    return await this.Auth.processLogin(data)
+  private processLoginData = async (data: object, res: Response) => {
+    return await this.authenticator
+      .processLogin(data)
       .then(async (user: object) => {
-        let token = await this.Auth.generateToken(user);
-        return HttpResponse.OK(res, { auth: true, token: token });
+        let token = await this.authenticator.generateToken(user);
+        return this.response.OK(res, { data: { token }, status: true });
       })
       .catch((err: { msg: any; payload: any }) => {
-        return HttpResponse.UNAUTHORIZED(res, {
+        return this.response.BAD_REQUEST(res, {
           auth: false,
           msg: err.msg,
           error: err.payload,

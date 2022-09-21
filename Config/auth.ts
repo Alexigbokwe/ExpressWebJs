@@ -1,5 +1,5 @@
 "use strict";
-import env from "Elucidate/Env";
+import { env } from "Elucidate/Env";
 export default {
   /*
   |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ export default {
   |
   */
   jwt: {
-    model: "User_model",
+    model: "UserModel",
     driver: "jwt",
     uid: "email",
     password: "password",

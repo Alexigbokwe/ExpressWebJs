@@ -1,10 +1,6 @@
-export default [
-  {
-    api: "/",
-    description: "ExpressWebJs Default Route",
-    request: {},
-    response: {
-      payload: { message: "object", status: "boolean" },
-    },
-  },
-];
+import { ApiDocumentation } from "Elucidate/Documentation/ApiDocumentation";
+import DefaultRoute from "./Docs/DefaultRoute";
+
+let endpointCollections = [DefaultRoute];
+
+export default ApiDocumentation.loadEndpoints(endpointCollections);

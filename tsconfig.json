@@ -16,5 +16,9 @@
     "declaration": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "noUnusedLocals":true,
+    "noPropertyAccessFromIndexSignature":true,
+    "strictNullChecks":true,
+    "useUnknownInCatchVariables":true
   }
 }

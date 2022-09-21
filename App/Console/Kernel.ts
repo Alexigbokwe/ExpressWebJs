@@ -1,5 +1,4 @@
-"use strict";
-import scheduler from "expressweb-scheduler-ts";
+// import scheduler from "expressweb-scheduler-ts";
 
 class Kernel {
   /**

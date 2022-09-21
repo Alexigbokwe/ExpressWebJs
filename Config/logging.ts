@@ -1,5 +1,5 @@
 "use strict";
-import env from "expresswebcorets/lib/Env";
+import { env, logChannel } from "expresswebcorets/lib/Env";
 
 export default {
   /*
@@ -13,7 +13,7 @@ export default {
     |
     */
 
-  default: env("LOG_CHANNEL", "console"),
+  default: env("LOG_CHANNEL", logChannel.Console),
 
   /*
     |--------------------------------------------------------------------------

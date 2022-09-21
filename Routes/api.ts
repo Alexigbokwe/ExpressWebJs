@@ -1,5 +1,6 @@
-import Route from "Elucidate/Route/manager";
-import { Request, Response, NextFunction } from "Elucidate/HttpContext";
+import { Route } from "Elucidate/Route/RouteManager";
+import { Request, Response } from "Config/http";
+
 /*
     |--------------------------------------------------------------------------
     | Api route   
@@ -11,7 +12,7 @@ import { Request, Response, NextFunction } from "Elucidate/HttpContext";
 */
 
 Route.get("/", (req: Request, res: Response) => {
-  res.status(200).send("Welcome to ExpressWebJs Typescript Version");
+  res.send("Welcome to ExpressWebJs Version 4");
 });
 
 //--------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-import env from "Elucidate/Env";
+import { env } from "Elucidate/Env";
 export default {
   /*
     |--------------------------------------------------------------------------

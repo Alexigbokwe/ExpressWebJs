@@ -7,6 +7,6 @@
 | in the .env file. You are free to configure them. 
 |
 */
+import { APP } from "expresswebcorets";
 
-import app from "expresswebcorets/lib/App";
-export default app.start();
+APP.start();

@@ -1,0 +1,19 @@
+FROM node:14-alpine
+
+RUN mkdir -p /app/expressweb-version4
+
+WORKDIR /app/expressweb-version4
+
+COPY package.json .
+
+RUN npm install
+
+RUN npm install ts-node
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 5200
+
+CMD ["npm","start"]

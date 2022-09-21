@@ -1,7 +1,19 @@
 "use strict";
-import env from "expresswebcorets/lib/Env";
-import path from "path";
+import { env, orm } from "expresswebcorets/lib/Env";
+import { Path } from "expresswebcorets/lib/Utils/Path";
 export default {
+  /*
+  |--------------------------------------------------------------------------
+  | Database ORM
+  |--------------------------------------------------------------------------
+  |
+  | ExpressWeb currently supports the following Object Relational Mappers(ORM)
+  | Objection for sql databases and  Mongoose for mongo DB. You need to select
+  | one depending on the type of database you are working on.
+  |
+  */
+  ORM: env("ORM", orm.Objection),
+
   /*
   |--------------------------------------------------------------------------
   | Database Multitenance
@@ -29,7 +41,6 @@ export default {
   |--------------------------------------------------------------------------
   |
   | Here we define connection settings for MySQL database.
-  |
   | npm i --save mysql mysql2
   |
   */
@@ -43,13 +54,13 @@ export default {
       database: env("DB_DATABASE"),
     },
     migrations: {
-      directory: path.join(__dirname, "../Database/Migrations/"),
+      directory: Path("Database/Migrations/"),
       tableName: "migrations",
-      stub: path.join(__dirname, "../Database/Migrations/migrationLayout.stub"),
+      stub: Path("Database/Migrations/migrationLayout.stub"),
       extension: "ts",
     },
     seeds: {
-      directory: path.join(__dirname, "../Database/Seeds/"),
+      directory: Path("Database/Seeds/"),
     },
   },
   /*
@@ -58,9 +69,7 @@ export default {
   |--------------------------------------------------------------------------
   |
   | Here we define connection settings for PostgreSQL database.
-  |
   | npm i --save pg
-  |
   | npm install --save pg pg-hstore
   |
   */
@@ -74,13 +83,13 @@ export default {
       database: env("DB_DATABASE"),
     },
     migrations: {
-      directory: path.join(__dirname, "../Database/Migrations/"),
+      directory: Path("Database/Migrations/"),
       tableName: "migrations",
-      stub: path.join(__dirname, "../Database/Migrations/migrationLayout.stub"),
+      stub: Path("Database/Migrations/migrationLayout.stub"),
       extension: "ts",
     },
     seeds: {
-      directory: path.join(__dirname, "../Database/Seeds/"),
+      directory: Path("Database/Seeds/"),
     },
   },
   /*
@@ -89,7 +98,6 @@ export default {
   |--------------------------------------------------------------------------
   |
   | Here we define connection settings for MongoDB database.
-  |
   | npm i --save mongoose
   |
   */
@@ -114,7 +122,6 @@ export default {
   |--------------------------------------------------------------------------
   |
   | Here we define connection settings for Redis database.
-  |
   | npm i --save ioredis
   |
   */
