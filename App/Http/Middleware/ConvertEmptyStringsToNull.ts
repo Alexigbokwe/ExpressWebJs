@@ -1,18 +1,18 @@
 "use strict";
+import { Request, Response } from "Config/http";
+import { MiddlewareHandler } from "Elucidate/MiddlewareHandler";
 
-import { Request, Response, NextFunction } from "Elucidate/HttpContext";
-
-class ConvertEmptyStringsToNull {
-  public async handle(req: Request, _res: Response, next: NextFunction) {
-    if (Object.keys(req.body).length) {
-      req.body = Object.assign({},
+class ConvertEmptyStringsToNull extends MiddlewareHandler {
+  override async preHandle(req: Request, _res: Response): Promise<boolean> {
+    if (req.body && Object.keys(req.body).length) {
+      req.body = Object.assign(
+        {},
         ...Object.keys(req.body).map((key) => ({
-          [key]: req.body[key] !== "" ? req.body[key] : null,
-        }))
+          [key]: req.body ? (req.body[key] !== "" ? req.body[key] : null) : null,
+        })),
       );
     }
-
-    await next();
+    return true;
   }
 }
 

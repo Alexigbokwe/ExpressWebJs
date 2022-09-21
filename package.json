@@ -30,8 +30,6 @@
     "typescript-transform-paths": "^2.2.3"
   },
   "dependencies": {
-    "amqp-ts": "^1.8.0",
-    "aws-sdk": "^2.933.0",
     "bcryptjs": "^2.4.3",
     "expressweb-scheduler-ts": "^1.0.4",
     "expresswebcorets": "^2.0.13",
