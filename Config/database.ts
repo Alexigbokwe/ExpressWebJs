@@ -54,13 +54,13 @@ export default {
       database: env("DB_DATABASE"),
     },
     migrations: {
-      directory: Path("../Database/Migrations/"),
+      directory: Path("Database/Migrations/"),
       tableName: "migrations",
-      stub: Path("../Database/Migrations/migrationLayout.stub"),
+      stub: Path("Database/Migrations/migrationLayout.stub"),
       extension: "ts",
     },
     seeds: {
-      directory: Path("../Database/Seeds/"),
+      directory: Path("Database/Seeds/"),
     },
   },
   /*
@@ -83,13 +83,13 @@ export default {
       database: env("DB_DATABASE"),
     },
     migrations: {
-      directory: Path("../Database/Migrations/"),
+      directory: Path("Database/Migrations/"),
       tableName: "migrations",
-      stub: Path("../Database/Migrations/migrationLayout.stub"),
+      stub: Path("Database/Migrations/migrationLayout.stub"),
       extension: "ts",
     },
     seeds: {
-      directory: Path("../Database/Seeds/"),
+      directory: Path("Database/Seeds/"),
     },
   },
   /*

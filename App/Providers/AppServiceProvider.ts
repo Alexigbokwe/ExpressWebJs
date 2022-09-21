@@ -3,7 +3,7 @@ import Authenticator from "Elucidate/Auth/Authenticator";
 import DOCUMENTATION from "Elucidate/Documentation";
 import routeDocumentation from "Resources/RouteDocumentation";
 
-class AppServiceProvicer extends ServiceProvider {
+class AppServiceProvider extends ServiceProvider {
   /**
    * Register any application services.
    * @return void
@@ -30,4 +30,4 @@ class AppServiceProvicer extends ServiceProvider {
   }
 }
 
-export default AppServiceProvicer;
+export default AppServiceProvider;
