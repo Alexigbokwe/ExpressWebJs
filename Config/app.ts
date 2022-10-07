@@ -40,7 +40,7 @@ export default {
     |
     */
 
-  enable_multithreading: env("ENABLE_MULTITHREADING", true),
+  enable_multithreading: env("ENABLE_MULTITHREADING", false),
 
   /*
     |--------------------------------------------------------------------------
