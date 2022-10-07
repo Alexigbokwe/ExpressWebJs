@@ -34,7 +34,7 @@ export default {
     |--------------------------------------------------------------------------
     |
     | ExpressWebJs MultiThread offers an easy way to dynamically offload computations 
-    | to a worker as well as manag a pool of dedicated workers. It implements the 
+    | to a worker as well as manage a pool of dedicated workers. It implements the 
     | thread pool pattern, it executes one task at a time, and once finished, 
     | picks a new task from the queue.
     |
