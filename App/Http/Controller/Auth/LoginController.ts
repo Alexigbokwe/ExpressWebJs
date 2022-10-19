@@ -3,7 +3,7 @@ import Authenticator from "Elucidate/Auth/Authenticator";
 import { LoginValidation, dataType } from "App/Http/Validation/LoginValidation";
 import { BaseController } from "../BaseController";
 
-class LoginController extends BaseController {
+export class LoginController extends BaseController {
   constructor(private authenticator: Authenticator) {
     super();
   }
@@ -16,16 +16,16 @@ class LoginController extends BaseController {
     | sends the response with generated token back to the caller.
     |
     */
-  login = async (req: Request, res: Response) => {
+  public async login(req: Request, res: Response) {
     let validation = await LoginValidation.validate<dataType>(req.body);
     if (validation.success) {
       return await this.processLoginData(validation.data, res);
     } else {
       return this.response.UNAUTHORIZED(res, { data: validation, status: false });
     }
-  };
+  }
 
-  private processLoginData = async (data: object, res: Response) => {
+  private async processLoginData(data: object, res: Response) {
     return await this.authenticator
       .processLogin(data)
       .then(async (user: object) => {
@@ -39,7 +39,5 @@ class LoginController extends BaseController {
           error: err.payload,
         });
       });
-  };
+  }
 }
-
-export default LoginController;
