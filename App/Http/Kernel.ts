@@ -7,7 +7,6 @@ export default {
   |--------------------------------------------------------------------------
   |
   | The application's global HTTP middleware stack.
-  |
   | These middlewares are run during every request to your application.
   |
   */
@@ -20,13 +19,6 @@ export default {
   |
   | Route middleware is key/value object to conditionally add middleware on
   | specific routes or assigned to group of routes.
-  |
-  | // define
-  | {
-  |   auth: 'App/Http/Middleware/Auth'
-  | }
-  |
-  | // in your route add [auth]
   |
   */
   routeMiddleware: {
