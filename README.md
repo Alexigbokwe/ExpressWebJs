@@ -1,5 +1,4 @@
-<p align="center"><a href="https://expresswebjs.com" target="_blank"><img src="https://expresswebjs.com/static/media/Logo.9bc684b2.png" width="400"></a>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/1280px-TypeScript_Logo_%28Blue%29.svg.png" width="50">
+<p align="center" style="grid-row:1"><a href="https://expresswebjs.com" target="_blank"><img src="https://miro.medium.com/max/1400/1*JwDL9l4rxnLhUIIVIbYMGA.jpeg" width="auto" height="auto"><span style="color:#699724"><span></a>
 </p>
 
 #
