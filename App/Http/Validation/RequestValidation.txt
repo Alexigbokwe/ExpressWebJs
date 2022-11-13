@@ -1,1 +1,1 @@
-Manage your application request validation in the Request directory
+Manage your application request validation in the validation directory

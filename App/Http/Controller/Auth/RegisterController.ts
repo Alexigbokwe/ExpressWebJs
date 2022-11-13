@@ -4,7 +4,7 @@ import Authenticator from "Elucidate/Auth/Authenticator";
 import { dataType, RegisterValidation } from "App/Http/Validation/RegisterValidation";
 import { BaseController } from "../BaseController";
 
-class RegisterController extends BaseController {
+export class RegisterController extends BaseController {
   constructor(private authenticator: Authenticator) {
     super();
   }
@@ -18,16 +18,16 @@ class RegisterController extends BaseController {
     | validation and creation of their token.
     |
     */
-  register = async (req: Request, res: Response) => {
+  public async register(req: Request, res: Response) {
     let validation = await RegisterValidation.validate<dataType>(req.body);
     if (validation.success) {
       return await this.createUserInstance(validation.data, res);
     } else {
       return this.response.BAD_REQUEST(res, { data: validation, status: false });
     }
-  };
+  }
 
-  private createUserInstance = async (data: object, res: Response) => {
+  private async createUserInstance(data: object, res: Response) {
     data["password"] = await Hash.make(data["password"]);
     return await this.authenticator
       .createUser(data)
@@ -42,7 +42,5 @@ class RegisterController extends BaseController {
           error: err.payload,
         });
       });
-  };
+  }
 }
-
-export default RegisterController;

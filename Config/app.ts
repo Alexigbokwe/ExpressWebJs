@@ -30,6 +30,20 @@ export default {
 
   /*
     |--------------------------------------------------------------------------
+    | MultiThreading
+    |--------------------------------------------------------------------------
+    |
+    | ExpressWebJs MultiThread offers an easy way to dynamically offload computations 
+    | to a worker as well as manage a pool of dedicated workers. It implements the 
+    | thread pool pattern, it executes one task at a time, and once finished, 
+    | picks a new task from the queue.
+    |
+    */
+
+  enable_multithreading: env("ENABLE_MULTITHREADING", false),
+
+  /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -106,6 +120,7 @@ export default {
      */
     "App/Providers/AppServiceProvider::class",
     "App/Providers/RouteServiceProvider::class",
+    "App/Providers/EventServiceProvider::class",
     //"App/Providers/SocketServiceProvider::class",
   ],
 

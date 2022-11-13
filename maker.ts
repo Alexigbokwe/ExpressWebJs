@@ -1,7 +1,6 @@
-import commands from "./Command/index";
+import commands from "./Resources/Command/index";
 import kernel from "./App/Console/Kernel";
 import makerts from "maker-console-ts";
-
 
 /*
 |--------------------------------------------------------------------------
