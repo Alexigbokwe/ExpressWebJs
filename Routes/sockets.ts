@@ -1,5 +1,5 @@
 "use strict";
-import Ws from "Elucidate/Socket/WS";
+import { Ws } from "Elucidate/Socket/WS";
 /*
 |--------------------------------------------------------------------------
 | socket.io
