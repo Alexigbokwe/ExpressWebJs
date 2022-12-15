@@ -17,7 +17,7 @@ const commands = [
   "ExpressWebJs/commands/make-nosql-model",
   "ExpressWebJs/commands/make-route",
   "ExpressWebJs/commands/make-middleware",
-  "ExpressWebJs/commands/make-request",
+  "ExpressWebJs/commands/make-validation",
   "ExpressWebJs/commands/make-sql-migration",
   "ExpressWebJs/commands/make-ws-controller",
   "ExpressWebJs/commands/run-sql-migration",
