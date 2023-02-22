@@ -1,4 +1,3 @@
-"use strict";
 import { env } from "Elucidate/Env";
 export default {
   /*

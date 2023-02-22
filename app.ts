@@ -7,6 +7,6 @@
 | in the .env file. You are free to configure them. 
 |
 */
-import { APP } from "expresswebcorets";
+import { StartApp } from "expresswebcorets";
 
-APP.start();
+StartApp.withHttpServer();

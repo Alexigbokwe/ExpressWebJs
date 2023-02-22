@@ -1,4 +1,3 @@
-"use strict";
 import { env, logChannel } from "expresswebcorets/lib/Env";
 
 export default {

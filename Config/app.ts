@@ -1,4 +1,3 @@
-"use strict";
 import { env, platform } from "expresswebcorets/lib/Env";
 export default {
   /*
@@ -114,7 +113,6 @@ export default {
      * ExpressWebJS Framework Service Providers...
      */
     "Elucidate/Route/RouteConfigServiceProvider::class",
-    "Elucidate/Database/DatabaseServiceProvider::class",
     /*
      * Application Service Providers...
      */

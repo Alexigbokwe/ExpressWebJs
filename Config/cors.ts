@@ -1,5 +1,3 @@
-"use strict";
-
 export default {
   /*
     |--------------------------------------------------------------------------
@@ -10,7 +8,7 @@ export default {
     |
     | Boolean: true - Allow current request origin
     | Boolean: false - Disallow all
-    | String - Comma seperated list of allowed origins
+    | String - Comma separated list of allowed origins
     | Array - An array of allowed origins
     | String: * - A wildcard to allow current request origin
     | Function - Receives the current origin and should return one of the above values.
@@ -25,7 +23,7 @@ export default {
     |
     | HTTP methods to be allowed. The value can be one of the following
     |
-    | String - Comma seperated list of allowed methods
+    | String - Comma separated list of allowed methods
     | Array - An array of allowed methods
     |
     */
@@ -41,7 +39,7 @@ export default {
     |
     | Boolean: true - Allow current request headers
     | Boolean: false - Disallow all
-    | String - Comma seperated list of allowed headers
+    | String - Comma separated list of allowed headers
     | Array - An array of allowed headers
     | String: * - A wildcard to allow current request headers
     | Function - Receives the current header and should return one of the above values.
@@ -58,7 +56,7 @@ export default {
     | header. The value can be on of the following.
     |
     | Boolean: false - Disallow all
-    | String: Comma seperated list of allowed headers
+    | String: Comma separated list of allowed headers
     | Array - An array of allowed headers
     |
     */

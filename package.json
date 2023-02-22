@@ -1,7 +1,7 @@
 {
   "name": "expresswebjs-ts-version",
-  "version": "4.1",
-  "description": "ExpressWebJs Version 4.1",
+  "version": "4.2",
+  "description": "ExpressWebJs Version 4.2",
   "main": "build/app.js",
   "scripts": {
     "test": "jest",
