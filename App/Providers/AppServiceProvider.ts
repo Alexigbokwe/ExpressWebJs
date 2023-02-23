@@ -1,5 +1,5 @@
 import ServiceProvider from "Elucidate/Support/ServiceProvider";
-import Authenticator from "Elucidate/Auth/Authenticator";
+import { Authenticator } from "Elucidate/Auth/Authenticator";
 import DOCUMENTATION from "Elucidate/Documentation";
 import routeDocumentation from "Resources/RouteDocumentation";
 

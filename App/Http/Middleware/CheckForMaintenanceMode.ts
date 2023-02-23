@@ -1,4 +1,3 @@
-"use strict";
 import appShutDown from "Elucidate/App/shutdown";
 import { Request, Response } from "Config/http";
 import { HttpResponse } from "Elucidate/HttpContext";

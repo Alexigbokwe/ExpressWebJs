@@ -1,21 +1,16 @@
-"use strict";
-import { env } from "expresswebcorets/lib/Env";
+import { env, orm } from "expresswebcorets/lib/Env";
+import { DBConnection } from "expresswebcorets/lib/Database/DataSourceConfig";
 import config from "./Config/database";
 
-class migration {
+class MigrationBuilder {
   constructor() {
-    if (env("DB_CONNECTION") != "mongoose") {
-      switch (env("DB_TENANT")) {
-        case "tenant1":
-        //return config.multitenant_tenants[0];
-        case "tenant2":
-        //return config.multitenant_tenants[1];
-        case "null":
-          return config[env("DB_CONNECTION")];
-        default:
-          throw Error("DB_TENANT is not specified in .env file");
-      }
+    if (config.database_multitenance == "true" && config.ORM != orm.Mongoose) {
+      let multitenantMigration = config.multitenant_tenants.connections.filter((connection) => connection.tenantName === env("DB_TENANT"));
+      return DBConnection.multitenantMigration(multitenantMigration[0]);
+    } else {
+      console.log("nope");
+      return DBConnection.migration(config.connection);
     }
   }
 }
-export default new migration();
+export default new MigrationBuilder();

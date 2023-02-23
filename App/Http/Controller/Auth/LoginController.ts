@@ -1,5 +1,5 @@
 import { Request, Response } from "Config/http";
-import Authenticator from "Elucidate/Auth/Authenticator";
+import { Authenticator } from "Elucidate/Auth/Authenticator";
 import { LoginValidation, dataType } from "App/Http/Validation/LoginValidation";
 import { BaseController } from "../BaseController";
 
@@ -19,25 +19,18 @@ export class LoginController extends BaseController {
   public async login(req: Request, res: Response) {
     let validation = await LoginValidation.validate<dataType>(req.body);
     if (validation.success) {
-      return await this.processLoginData(validation.data, res);
+      const user = await this.authenticator.processLogin(validation.data);
+      if (user.status) {
+        let token = this.authenticator.generateToken(user.payload);
+        return this.response.OK(res, { data: { token }, status: true });
+      }
+      return this.response.BAD_REQUEST(res, {
+        auth: user.status,
+        message: user.message,
+        error: user.payload,
+      });
     } else {
       return this.response.UNAUTHORIZED(res, { data: validation, status: false });
     }
-  }
-
-  private async processLoginData(data: object, res: Response) {
-    return await this.authenticator
-      .processLogin(data)
-      .then(async (user: object) => {
-        let token = await this.authenticator.generateToken(user);
-        return this.response.OK(res, { data: { token }, status: true });
-      })
-      .catch((err: { msg: any; payload: any }) => {
-        return this.response.BAD_REQUEST(res, {
-          auth: false,
-          msg: err.msg,
-          error: err.payload,
-        });
-      });
   }
 }
