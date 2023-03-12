@@ -40,6 +40,7 @@
     "module-alias": "^2.2.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "objection": "^3.0.1",
     "recursive-copy": "^2.0.13",
     "set-value": "^4.1.0"
   }

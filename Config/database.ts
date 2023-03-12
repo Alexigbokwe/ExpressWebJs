@@ -9,8 +9,8 @@ export default {
   | Database ORM
   |--------------------------------------------------------------------------
   | ExpressWeb currently supports the following Object Relational Mappers(ORM)
-  | Objection and TypeORM for sql databases and  Mongoose for mongo DB. You need to select
-  | one depending on the type of database you are working on.
+  | Objection and TypeORM for sql databases and  Mongoose for mongo DB.
+  | You need to select one depending on the type of database you are working on.
   |
   */
   ORM: env("ORM", orm.Objection),
