@@ -1,6 +1,6 @@
 {
   "name": "expresswebjs-ts-version",
-  "version": "4.2",
+  "version": "4.2.1",
   "description": "ExpressWebJs Version 4.2",
   "main": "build/app.js",
   "scripts": {
@@ -33,14 +33,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "expressweb-scheduler-ts": "^1.0.4",
-    "expresswebcorets": "^2.0.26",
+    "expresswebcorets": "^2.0.27",
     "expresswebjs-preset-ts": "^1.0.4",
     "log4js": "^6.3.0",
     "maker-console-ts": "^2.0.12",
     "module-alias": "^2.2.2",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
     "objection": "^3.0.1",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
     "recursive-copy": "^2.0.13",
     "set-value": "^4.1.0"
   }
