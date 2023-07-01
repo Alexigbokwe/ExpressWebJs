@@ -13,7 +13,7 @@ export default {
   | Here you specify the path to your proto files
   |
   */
-  protos: [Path("App/Protos/Todo.proto")],
+  protos: [Path("App/Proto/app.proto")],
 
   /*
   |--------------------------------------------------------------------------

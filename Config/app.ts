@@ -112,7 +112,7 @@ export default {
     /*
      * ExpressWebJS Framework Service Providers...
      */
-    "Elucidate/Route/RouteConfigServiceProvider::class",
+    "elucidate/Route/RouteConfigServiceProvider::class",
     /*
      * Application Service Providers...
      */

@@ -1,5 +1,5 @@
 import { Authenticator } from "Elucidate/Auth/Authenticator";
-import { Request, Response } from "Config/http";
+import { Request, Response } from "Config/Http";
 import { HttpResponse } from "Elucidate/HttpContext";
 import { MiddlewareHandler } from "Elucidate/MiddlewareHandler";
 

@@ -1,7 +1,7 @@
-import commands from "./Resources/Command/index";
+import commands from "./Resources/Command";
 import kernel from "./App/Console/Kernel";
-import database from "./Config/database";
-import makerTs from "maker-console-ts";
+import database from "./Config/Database";
+import Console from "maker-console-ts";
 
 /*
 |--------------------------------------------------------------------------
@@ -12,4 +12,4 @@ import makerTs from "maker-console-ts";
 | executed in this console and the response sent back to a terminal
 |
 */
-makerTs.run(commands, kernel, database.ORM);
+Console.run(commands, kernel, database.ORM);

@@ -1,6 +1,6 @@
-import { Request, Response } from "Config/http";
+import { Request, Response } from "Config/Http";
 import { MiddlewareHandler } from "Elucidate/MiddlewareHandler";
-import FormRequest from "Elucidate/Validator/FormRequest";
+import { FormRequest } from "Elucidate/Validator/FormRequest";
 
 class RequestBodyValidator extends MiddlewareHandler {
   override async preHandle(req: Request, res: Response): Promise<boolean> {

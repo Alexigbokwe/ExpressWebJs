@@ -1,4 +1,4 @@
-import { Request, Response } from "Config/http";
+import { Request, Response } from "Config/Http";
 import { MiddlewareHandler } from "Elucidate/MiddlewareHandler";
 
 class ConvertEmptyStringsToNull extends MiddlewareHandler {
@@ -8,7 +8,7 @@ class ConvertEmptyStringsToNull extends MiddlewareHandler {
         {},
         ...Object.keys(req.body).map((key) => ({
           [key]: req.body ? (req.body[key] !== "" ? req.body[key] : null) : null,
-        })),
+        }))
       );
     }
     return true;

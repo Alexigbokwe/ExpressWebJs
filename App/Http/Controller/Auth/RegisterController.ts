@@ -1,5 +1,5 @@
 import Hash from "Elucidate/Hashing/Hash";
-import { Request, Response } from "Config/http";
+import { Request, Response } from "Config/Http";
 import { Authenticator } from "Elucidate/Auth/Authenticator";
 import { dataType, RegisterValidation } from "App/Http/Validation/RegisterValidation";
 import { BaseController } from "../BaseController";
@@ -9,15 +9,7 @@ export class RegisterController extends BaseController {
     super();
   }
 
-  /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation of their token.
-    |
-    */
+  // Handle user registration and token generation.
   public async register(req: Request, res: Response) {
     let validation = await RegisterValidation.validate<dataType>(req.body);
     if (validation.success) {

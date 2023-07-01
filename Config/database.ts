@@ -97,7 +97,7 @@ export default {
   | Which includes the following:
   */
   seeds: {
-    directory: Path("Database/Seeds/"),
+    directory: Path("Database/seeds/"),
   },
 
   /*
