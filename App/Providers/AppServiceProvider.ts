@@ -1,9 +1,7 @@
-import ServiceProvider from "Elucidate/Support/ServiceProvider";
-import Authenticator from "Elucidate/Auth/Authenticator";
-import DOCUMENTATION from "Elucidate/Documentation";
-import routeDocumentation from "Resources/RouteDocumentation";
+import { ServiceProvider } from "Elucidate/Support/ServiceProvider";
+import { Authenticator } from "Elucidate/Auth/Authenticator";
 
-class AppServiceProvider extends ServiceProvider {
+export class AppServiceProvider extends ServiceProvider {
   /**
    * Register any application services.
    * @return void
@@ -25,9 +23,6 @@ class AppServiceProvider extends ServiceProvider {
    * @return void
    */
   public async booted() {
-    // Documentation endpoint is '/documentationView' for JSON response '/documentationJson'
-    DOCUMENTATION.autoDocumentEndPoints("./Resources", routeDocumentation, "http://localhost:5200/");
+    //
   }
 }
-
-export default AppServiceProvider;

@@ -1,4 +1,3 @@
-"use strict";
 import { env, logChannel } from "expresswebcorets/lib/Env";
 
 export default {
@@ -36,7 +35,7 @@ export default {
     file: {
       category: "system-log",
       type: "file",
-      filename: "Logs/systemLog.log",
+      filename: "Logs/SystemLog.log",
       maxLogSize: 10240,
       backups: 3,
       flag: "w",

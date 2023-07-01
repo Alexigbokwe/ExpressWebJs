@@ -1,5 +1,4 @@
-"use strict";
-import FormRequest from "Elucidate/Validator/FormRequest";
+import { FormRequest } from "Elucidate/Validator/FormRequest";
 
 type dataType = { username: string; email: string; password: string };
 

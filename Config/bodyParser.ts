@@ -1,5 +1,3 @@
-"use strict";
-
 export default {
   /*
   |--------------------------------------------------------------------------
@@ -28,7 +26,7 @@ export default {
     |--------------------------------------------------------------------------
     |
     | When `strict` is set to true, body parser will only parse Arrays and
-    | Object. Otherwise everything parseable by `JSON.parse` is parsed.
+    | Object. Otherwise everything parsable by `JSON.parse` is parsed.
     |
     */
     strict: true,
@@ -39,16 +37,11 @@ export default {
     |--------------------------------------------------------------------------
     |
     | Which content types are processed as JSON payloads. You are free to
-    | add your own types here, but the request body should be parseable
+    | add your own types here, but the request body should be parsable
     | by `JSON.parse` method.
     |
     */
-    types: [
-      "application/json",
-      "application/json-patch+json",
-      "application/vnd.api+json",
-      "application/csp-report",
-    ],
+    types: ["application/json", "application/json-patch+json", "application/vnd.api+json", "application/csp-report"],
   },
 
   /*
@@ -113,7 +106,7 @@ export default {
     | manually process the files when required.
     |
     | This value can contain a boolean or an array of route patterns
-    | to be autoprocessed.
+    | to be auto processed.
     */
     autoProcess: true,
 
@@ -137,7 +130,7 @@ export default {
     | Define a function, which should return a string to be used as the
     | tmp file name.
     |
-    | If not defined, Bodyparser will use `uuid` as the tmp file name.
+    | If not defined, BodyParser will use `uuid` as the tmp file name.
     |
     | To be defined as. If you are defining the function, then do make sure
     | to return a value from it.

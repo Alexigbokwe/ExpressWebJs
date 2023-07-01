@@ -1,9 +1,9 @@
 <p align="center" style="grid-row:1"><a href="https://expresswebjs.com" target="_blank"><img src="https://miro.medium.com/max/1400/1*JwDL9l4rxnLhUIIVIbYMGA.jpeg" width="auto" height="auto"><span style="color:#699724"><span></a>
 </p>
 
-#
+### Version 4.2
 
-ExpressWebJs is a **Node FrameWork** with expressive and organised syntax that runs on all
+ExpressWebJs is a **Node FrameWork** with expressive and organized syntax that runs on all
 major operating systems. It provides the starting point for creating your node project, allowing
 you to focus more on developing your amazing solution.
 
@@ -21,12 +21,12 @@ ExpressWebJs is designed for building professional web applications.
 - Super-high test coverage
 - HTTP helpers (redirection, caching, etc)
 - Support for both SQL and NOSQL database
-- Well organised and structured.
-- Supports Use Of Dependency Injection
+- Well organized and structured.
+- Powerful Dependency Injection
 - Supports websocket
 - Highly scalable
-- Authentication and Authorisation
-- Model & JsonSchema
+- Authentication and Authorization
+- Model & JsonSchema validation
 - Middlewares
 - Providers
 - Upload files
@@ -35,12 +35,15 @@ ExpressWebJs is designed for building professional web applications.
 - Queues
 - Task Scheduling
 - Multi-tenancy
+- Supports REST, gRPC, Message Broker
 
-## Follow us on twitter @expresswebjs
+## Follow us on twitter [@expresswebjs](https://twitter.com/expresswebjs)
 
-## Join ExpressWebJs Community on [Discord](https://discord.com/invite/vrPGZCgJuj) to chat with other engineers using using ExpressWebJs
+## Visit our [Blog](https://medium.com/@expresswebjs) for more articles on ExpressWebJs.
 
-Our Github discussion page is available for questions and discussions
+## Join ExpressWebJs Community on [Discord](https://discord.com/invite/vrPGZCgJuj) to chat with other engineers using using ExpressWebJs.
+
+### Our Github discussion page is available for questions and discussions
 
 [https://github.com/Alexigbokwe/ExpressWebJs/discussions](https://github.com/Alexigbokwe/ExpressWebJs/discussions)
 

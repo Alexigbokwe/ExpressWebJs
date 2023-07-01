@@ -1,5 +1,5 @@
 import { Route } from "Elucidate/Route/RouteManager";
-import { Request, Response } from "Config/http";
+import { Request, Response } from "Config/Http";
 
 /*
     |--------------------------------------------------------------------------
@@ -12,7 +12,7 @@ import { Request, Response } from "Config/http";
 */
 
 Route.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to ExpressWebJs Version 4.1");
+  res.send("Welcome to ExpressWebJs Version 4.2");
 });
 
 //--------------------------------------------------------------------------

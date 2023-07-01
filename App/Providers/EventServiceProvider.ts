@@ -1,5 +1,5 @@
-import ServiceProvider from "Elucidate/Support/ServiceProvider";
-//import { Event } from "Elucidate/Event";
+import { ServiceProvider } from "Elucidate/Support/ServiceProvider";
+// import { Event } from "Elucidate/Event";
 
 export class EventServiceProvider extends ServiceProvider {
   /**

@@ -1,5 +1,5 @@
 // import { Server } from "socket.io";
-// import config from "Config/socket";
+// import config from "Config/Socket";
 // import ServiceProvider from "Elucidate/Support/ServiceProvider";
 
 // export class SocketServiceProvider extends ServiceProvider {

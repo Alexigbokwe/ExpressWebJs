@@ -1,25 +1,40 @@
-"use strict";
+import * as objection from "objection";
 import { env, orm } from "expresswebcorets/lib/Env";
 import { Path } from "expresswebcorets/lib/Utils/Path";
+import { DBConnection, ObjectionConfigurationType } from "expresswebcorets/lib/Database/DataSourceConfig";
+
 export default {
   /*
   |--------------------------------------------------------------------------
   | Database ORM
   |--------------------------------------------------------------------------
-  |
   | ExpressWeb currently supports the following Object Relational Mappers(ORM)
-  | Objection for sql databases and  Mongoose for mongo DB. You need to select
-  | one depending on the type of database you are working on.
+  | Objection and TypeORM for sql databases and  Mongoose for mongo DB.
+  | You need to select one depending on the type of database you are working on.
   |
   */
   ORM: env("ORM", orm.Objection),
 
   /*
   |--------------------------------------------------------------------------
+  | Database Provider
+  |--------------------------------------------------------------------------
+  | With respect to the orm you selected, you need to import the provider and
+  | assign it to provider.
+  | Example:
+  | for objection, import * as objection from "objection"
+  | for typeorm, import * as typeorm from "typeorm"
+  | Then assign typeorm to provider like this:
+  | provider: typeorm
+  |
+  */
+  provider: objection,
+
+  /*
+  |--------------------------------------------------------------------------
   | Database Multitenance
   |--------------------------------------------------------------------------
-  |
-  | Database multitenace can be activated by switching the value to true and can
+  | Database multitenance can be activated by switching the value to true and can
   | be deactivated by switching it to false.
   |
   */
@@ -28,24 +43,29 @@ export default {
   |--------------------------------------------------------------------------
   | Multitenance Connections
   |--------------------------------------------------------------------------
-  |
-  | Database multitenace connection enables interaction with multiple
+  | Database multitenance connection enables interaction with multiple
   | SQL databases where each database is a tenant in your system.
   | The tenant array accepts an object of database connections (tenants).
   |
   */
-  multitenant_tenants: [],
-  /* 
+  multitenant_tenants: DBConnection.multitenant<ObjectionConfigurationType>("Objection", []),
+
+  /*
   |--------------------------------------------------------------------------
-  | MySQL Database
+  | Database Connection
   |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MySQL database.
-  | npm i --save mysql mysql2
+  | Here we define connection settings for both TypeORM, Objection, and mongoose.
+  | For typeORM, npm i --save typeorm
+  | For Objection, npm i --save objection
+  | For Mongoose, npm i --save mongoose
+  | --------------------------------------------------------------------------
+  | For SQL db, install the driver of your choice
+  | mysql driver, npm i --save mysql mysql2
+  | postgres driver, npm i --save pg pg-hstore
   |
   */
-  mysql: {
-    client: "mysql",
+  connection: DBConnection.connect<ObjectionConfigurationType>({
+    client: env("DB_DRIVER"),
     connection: {
       host: env("DB_HOST"),
       port: env("DB_PORT"),
@@ -53,77 +73,39 @@ export default {
       password: env("DB_PASSWORD"),
       database: env("DB_DATABASE"),
     },
-    migrations: {
-      directory: Path("Database/Migrations/"),
-      tableName: "migrations",
-      stub: Path("Database/Migrations/migrationLayout.stub"),
-      extension: "ts",
-    },
-    seeds: {
-      directory: Path("Database/Seeds/"),
-    },
-  },
+  }),
+
   /*
   |--------------------------------------------------------------------------
-  | PostgreSQL Database
+  | Migration Configuration
   |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for PostgreSQL database.
-  | npm i --save pg
-  | npm install --save pg pg-hstore
-  |
+  | Here we have database migration configuration.
+  | Which includes the following:
   */
-  pg: {
-    client: "pg",
-    connection: {
-      host: env("DB_HOST"),
-      port: env("DB_PORT"),
-      user: env("DB_USER"),
-      password: env("DB_PASSWORD"),
-      database: env("DB_DATABASE"),
-    },
-    migrations: {
-      directory: Path("Database/Migrations/"),
-      tableName: "migrations",
-      stub: Path("Database/Migrations/migrationLayout.stub"),
-      extension: "ts",
-    },
-    seeds: {
-      directory: Path("Database/Seeds/"),
-    },
-  },
-  /*
-  |--------------------------------------------------------------------------
-  | MongoDB Database
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MongoDB database.
-  | npm i --save mongoose
-  |
-  */
-  mongoose: {
-    client: "mongoose",
-    host: env("DB_HOST"),
-    port: env("DB_PORT"),
-    user: env("DB_USER"),
-    password: env("DB_PASSWORD"),
-    database: env("DB_DATABASE"),
-    useCreateIndex: env("DB_USECREATEINDEX"),
-    useNewUrlParser: env("DB_USENEWURLPARSER"),
-    useUnifiedTopology: env("DB_USEUNIFIEDTOPOLOGY"),
-    connection: {
-      connection_link: `mongodb://${env("DB_USER")}:${env("DB_PASSWORD")}@${env("DB_HOST")}:${env("DB_PORT")}/${env("DB_DATABASE")}`,
-    },
+  migrations: {
+    directory: Path("Database/Migrations/"),
+    tableName: "migrations",
+    stub: Path("Database/Migrations/migrationLayout.stub"),
+    extension: "ts",
   },
 
-  /* 
+  /*
   |--------------------------------------------------------------------------
-  | Redis Database
+  | Seed Configuration
   |--------------------------------------------------------------------------
-  |
+  | Here we have database seed configuration.
+  | Which includes the following:
+  */
+  seeds: {
+    directory: Path("Database/seeds/"),
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | Redis Connection
+  |--------------------------------------------------------------------------
   | Here we define connection settings for Redis database.
   | npm i --save ioredis
-  |
   */
   redis: {
     client: env("REDIS_CLIENT", "default"),
@@ -142,16 +124,4 @@ export default {
       database: env("REDIS_DB", 0),
     },
   },
-
-  /*
-  |--------------------------------------------------------------------------
-  | Default Connection
-  |--------------------------------------------------------------------------
-  |
-  | Connection defines the default connection settings to be used while
-  | interacting with databases.
-  | list of connections : mysql, mongoose
-  |
-  */
-  Default_connection: env("DB_CONNECTION"),
 };

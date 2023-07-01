@@ -1,4 +1,3 @@
-"use strict";
 import { env } from "expresswebcorets/lib/Env";
 
 export default {
@@ -7,7 +6,7 @@ export default {
     | Social Connection Drivers
     |--------------------------------------------------------------------------
     |
-    | ExpressWebJs social API supports so many authenication services,
+    | ExpressWebJs social API supports so many authentication services,
     | giving you the flexibility to use single sign-on using an OAuth provider such as
     | Facebook,Twitter,LinkedIn,Google, Microsoft.
     | 

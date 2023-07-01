@@ -1,8 +1,7 @@
 import { HttpResponse } from "Elucidate/HttpContext";
 import Exception from "Elucidate/ExceptionHandler/BaseException";
-import { BaseBroker } from "Elucidate/Broker";
 
-export abstract class BaseController extends BaseBroker {
+export abstract class BaseController {
   protected response = HttpResponse;
 
   protected getFriendlyErrorMessage = (error: unknown) => {

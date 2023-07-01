@@ -1,6 +1,6 @@
 import Hash from "Elucidate/Hashing/Hash";
-import { Request, Response } from "Config/http";
-import Authenticator from "Elucidate/Auth/Authenticator";
+import { Request, Response } from "Config/Http";
+import { Authenticator } from "Elucidate/Auth/Authenticator";
 import { dataType, RegisterValidation } from "App/Http/Validation/RegisterValidation";
 import { BaseController } from "../BaseController";
 
@@ -9,38 +9,23 @@ export class RegisterController extends BaseController {
     super();
   }
 
-  /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation of their token.
-    |
-    */
+  // Handle user registration and token generation.
   public async register(req: Request, res: Response) {
     let validation = await RegisterValidation.validate<dataType>(req.body);
     if (validation.success) {
-      return await this.createUserInstance(validation.data, res);
+      validation.data.password = String(await Hash.make(validation.data.password));
+      let user = await this.authenticator.processRegistration(validation.data);
+      if (user.status) {
+        let token = this.authenticator.generateToken(user.payload);
+        return this.response.OK(res, { status: true, data: { token } });
+      }
+      return this.response.UNAUTHORIZED(res, {
+        auth: user.status,
+        msg: user.message,
+        error: user.payload,
+      });
     } else {
       return this.response.BAD_REQUEST(res, { data: validation, status: false });
     }
-  }
-
-  private async createUserInstance(data: object, res: Response) {
-    data["password"] = await Hash.make(data["password"]);
-    return await this.authenticator
-      .createUser(data)
-      .then(async (user: any) => {
-        let token = await this.authenticator.generateToken(user);
-        return this.response.OK(res, { status: true, data: { token } });
-      })
-      .catch((err: { msg: any; payload: any }) => {
-        return this.response.UNAUTHORIZED(res, {
-          auth: false,
-          msg: err.msg,
-          error: err.payload,
-        });
-      });
   }
 }

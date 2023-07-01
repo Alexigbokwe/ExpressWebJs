@@ -1,6 +1,6 @@
-import ServiceProvider from "Elucidate/Support/ServiceProvider";
+import { ServiceProvider } from "Elucidate/Support/ServiceProvider";
 import IRoute from "Elucidate/Route/RouteConfigServiceProvider";
-import ApplicationConfig from "Config/app";
+import ApplicationConfig from "Config/App";
 
 class RouteServiceProvider extends ServiceProvider {
   Route!: IRoute;
@@ -18,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider {
    * Configure the rate limiters for the application.
    */
   configureRateLimiting() {
-    return this.Route.for(`/${ApplicationConfig.routePrefix}/`).perMinute(1000).errorMessage().httpStatusCode(429).save();
+    return this.Route.for(`/${ApplicationConfig.routePrefix}/`).perMinute(1000000).errorMessage().httpStatusCode(429).save();
   }
 }
 

@@ -1,43 +1,32 @@
-import { Request, Response } from "Config/http";
-import Authenticator from "Elucidate/Auth/Authenticator";
+import { Request, Response } from "Config/Http";
+import { Authenticator } from "Elucidate/Auth/Authenticator";
 import { LoginValidation, dataType } from "App/Http/Validation/LoginValidation";
 import { BaseController } from "../BaseController";
 
 export class LoginController extends BaseController {
-  constructor(private authenticator: Authenticator) {
+  constructor(private readonly authenticator: Authenticator) {
     super();
   }
-  /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | sends the response with generated token back to the caller.
-    |
-    */
+
+  /**
+   * Authenticate user and sends the response with a generated token.
+   */
   public async login(req: Request, res: Response) {
-    let validation = await LoginValidation.validate<dataType>(req.body);
-    if (validation.success) {
-      return await this.processLoginData(validation.data, res);
-    } else {
+    const validation = await LoginValidation.validate<dataType>(req.body);
+    if (!validation.success) {
       return this.response.UNAUTHORIZED(res, { data: validation, status: false });
     }
-  }
 
-  private async processLoginData(data: object, res: Response) {
-    return await this.authenticator
-      .processLogin(data)
-      .then(async (user: object) => {
-        let token = await this.authenticator.generateToken(user);
-        return this.response.OK(res, { data: { token }, status: true });
-      })
-      .catch((err: { msg: any; payload: any }) => {
-        return this.response.BAD_REQUEST(res, {
-          auth: false,
-          msg: err.msg,
-          error: err.payload,
-        });
+    const user = await this.authenticator.processLogin(validation.data);
+    if (!user.status) {
+      return this.response.BAD_REQUEST(res, {
+        auth: user.status,
+        message: user.message,
+        error: user.payload,
       });
+    }
+
+    const token = this.authenticator.generateToken(user.payload);
+    return this.response.OK(res, { data: { token }, status: true });
   }
 }
