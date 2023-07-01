@@ -1,6 +1,6 @@
 import { env, orm } from "expresswebcorets/lib/Env";
 import { DBConnection } from "expresswebcorets/lib/Database/DataSourceConfig";
-import config from "./Config/database";
+import config from "./Config/Database";
 
 class MigrationBuilder {
   constructor() {

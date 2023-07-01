@@ -36,7 +36,7 @@
     "expresswebcorets": "^2.1.0",
     "expresswebjs-preset-ts": "^1.0.4",
     "log4js": "^6.3.0",
-    "maker-console-ts": "^2.0.12",
+    "maker-console-ts": "^2.0.15",
     "module-alias": "^2.2.2",
     "objection": "^3.0.1",
     "pg": "^8.10.0",

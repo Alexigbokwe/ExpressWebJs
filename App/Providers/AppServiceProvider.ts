@@ -1,7 +1,7 @@
-import ServiceProvider from "Elucidate/Support/ServiceProvider";
+import { ServiceProvider } from "Elucidate/Support/ServiceProvider";
 import { Authenticator } from "Elucidate/Auth/Authenticator";
 
-class AppServiceProvider extends ServiceProvider {
+export class AppServiceProvider extends ServiceProvider {
   /**
    * Register any application services.
    * @return void
@@ -26,5 +26,3 @@ class AppServiceProvider extends ServiceProvider {
     //
   }
 }
-
-export default AppServiceProvider;
