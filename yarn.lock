@@ -497,9 +497,9 @@
     "@jridgewell/trace-mapping" "0.3.9"
 
 "@grpc/grpc-js@^1.8.19":
-  version "1.8.19"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.19.tgz#0cc2372ca6187e8dcc6f9054f1d2936282ab8943"
-  integrity sha512-yCkvhtstJvUL3DEQAF5Uq5KoqQL27MTdfxVYvGsGduoGxiJcRCvJ29t5OmLfLhRuRpjAQ1OlhJD/IPOfX+8jNw==
+  version "1.8.20"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.20.tgz#03dc316045664299bbf30f0458f5877ebeec5815"
+  integrity sha512-SPse1wE4PcIFojOISsAnrWXCBsCBwDdcDqz2SS0T8nBSxg9jwmCK70Jy7ypRn2nIspwLy3Ls5TNaKNHo+6dF8A==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
@@ -1268,10 +1268,15 @@
   dependencies:
     mongoose "^6.3.0"
 
-"@types/node@*", "@types/node@>=12.12.47", "@types/node@>=13.7.0":
+"@types/node@*":
   version "20.4.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.4.tgz#c79c7cc22c9d0e97a7944954c9e663bcbd92b0cb"
   integrity sha512-CukZhumInROvLq3+b5gLev+vgpsIqC2D0deQr/yS1WnxvmYLlJXZpaQrQiseMY+6xusl79E04UjWoqyr+t1/Ew==
+
+"@types/node@>=12.12.47", "@types/node@>=13.7.0":
+  version "20.4.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.5.tgz#9dc0a5cb1ccce4f7a731660935ab70b9c00a5d69"
+  integrity sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==
 
 "@types/node@^14.14.17":
   version "14.18.54"
@@ -2186,10 +2191,10 @@ expressweb-scheduler-ts@^1.0.4:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.1.tgz#942b0af6866d720e758bcb1472d6f1224543a955"
-  integrity sha512-F7PggcJ7QaozmVe+UCXX+xE4/cit18ZGINvjv/pswQVgvvnItud5kP2kCka4AAC0CC4WTFLgbAaH5C37GclmwQ==
+expresswebcorets@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.3.tgz#399c9d4e381f5deb49cd547ebca8f521ccc16be6"
+  integrity sha512-fTEjVDpbAzgHA71nP9qp7hFYYe2I2YjyZDYXC7aksOps/Vk9jecWQMv/gZZFOt0WK6Sc46Kc1Qg34fIv1jsdFg==
   dependencies:
     "@grpc/grpc-js" "^1.8.19"
     "@grpc/proto-loader" "^0.7.8"
