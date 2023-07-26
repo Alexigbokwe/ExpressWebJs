@@ -2191,10 +2191,10 @@ expressweb-scheduler-ts@^1.0.4:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.3.tgz#399c9d4e381f5deb49cd547ebca8f521ccc16be6"
-  integrity sha512-fTEjVDpbAzgHA71nP9qp7hFYYe2I2YjyZDYXC7aksOps/Vk9jecWQMv/gZZFOt0WK6Sc46Kc1Qg34fIv1jsdFg==
+expresswebcorets@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.5.tgz#d257e2ddda7b2601118ae82f5c4f091d06685f70"
+  integrity sha512-XhOIRpGw0McZ1YSzVqwbkxQKMAqBEnosFWhqgm69OzBCHNGTxWuv8da36JLrK7uE8Dh4DG/Mwgj4nYtGaaEI/w==
   dependencies:
     "@grpc/grpc-js" "^1.8.19"
     "@grpc/proto-loader" "^0.7.8"
@@ -2226,10 +2226,10 @@ expresswebcorets@^2.1.3:
     validatorjs "^3.22.1"
     workerpool "^6.3.1"
 
-expresswebjs-preset-ts@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/expresswebjs-preset-ts/-/expresswebjs-preset-ts-1.0.4.tgz#0de564b8d30e0efeef33008004d3b5be25d2fda8"
-  integrity sha512-fUFQhgv5ZG/mAIBdQteC6LdzeyiEjxP49D8EAitIRcLBp4gPyZFVT0sp09eEK3BIZtQfXsXWSa8CQojNgnMstw==
+expresswebjs-preset-ts@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/expresswebjs-preset-ts/-/expresswebjs-preset-ts-1.0.5.tgz#b6e92c96896fa0abf466190fd427312ce05689f8"
+  integrity sha512-oDWWNZNYUO1ZrQsW5miQW4WRHZY2ie4fLYpoo7CRYPlsf9mbwU5vmTd170rUAEABxY3yt4CcFUKI+82zFJdShQ==
 
 expresswebtpr@^0.0.1:
   version "0.0.1"
