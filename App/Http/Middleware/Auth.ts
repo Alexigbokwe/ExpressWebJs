@@ -2,6 +2,7 @@ import { Authenticator } from "Elucidate/Auth/Authenticator";
 import { Request, Response } from "Config/Http";
 import { HttpResponse } from "Elucidate/HttpContext";
 import { MiddlewareHandler } from "Elucidate/MiddlewareHandler";
+import { Authority } from "Elucidate/AuthorizationFilter";
 
 class AuthMiddleware extends MiddlewareHandler {
   constructor(private authenticator: Authenticator) {
@@ -16,6 +17,7 @@ class AuthMiddleware extends MiddlewareHandler {
     }
 
     req.user = result.payload;
+    Authority.setAuthenticatedUser(req.user as {} & { id: string | number });
     return true;
   }
 }
