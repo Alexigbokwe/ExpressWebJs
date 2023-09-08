@@ -2191,10 +2191,10 @@ expressweb-scheduler-ts@^1.0.4:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@2.1.11:
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.11.tgz#30329719d668de04fc305ed4419e4786309153ac"
-  integrity sha512-VCu3IKzn726vK5sEiv0204Ejs1uqLMzV5ndSG2n7ZFTji1jRtjDNScScIuo5Vltm6M1nJO/wEuTNiYbYDfSNJQ==
+expresswebcorets@2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.12.tgz#39b76ec48078b67f883b9e26a08385f55557d0ee"
+  integrity sha512-sSyKaPg57xX/gn/VpylFUaHmjTv1fgSn9ZsURxVZSdPFCgUXhh9VTnHyeOjkghKTXdd4Y93wNVnDngAKTeQBYA==
   dependencies:
     "@grpc/grpc-js" "^1.8.19"
     "@grpc/proto-loader" "^0.7.8"
