@@ -2191,10 +2191,10 @@ expressweb-scheduler-ts@^1.0.4:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.12.tgz#39b76ec48078b67f883b9e26a08385f55557d0ee"
-  integrity sha512-sSyKaPg57xX/gn/VpylFUaHmjTv1fgSn9ZsURxVZSdPFCgUXhh9VTnHyeOjkghKTXdd4Y93wNVnDngAKTeQBYA==
+expresswebcorets@2.1.14:
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.14.tgz#2d37d4a4e2d4ac1d2cac69e5424511792872dc0a"
+  integrity sha512-or4d7Zqw9AACIo9Akahc7g+7WknnbPZuRz5jQ01l5l06sYkA320EYzuB2dIGD65HjBPAop11vsztZkSx2W2z3Q==
   dependencies:
     "@grpc/grpc-js" "^1.8.19"
     "@grpc/proto-loader" "^0.7.8"
@@ -3049,10 +3049,10 @@ make-fetch-happen@^11.0.0, make-fetch-happen@^11.0.1, make-fetch-happen@^11.0.3,
     socks-proxy-agent "^7.0.0"
     ssri "^10.0.0"
 
-maker-console-ts@2.0.19:
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.0.19.tgz#e190737ac6f1048af56412189520078f41dd98ff"
-  integrity sha512-goMM5627Axj//kXuALab8fovLDVMDGZUEJ8Sc10tFD2511gx11ojqfsgzMFXQEEpXQsOZo4idarxnpkPDC4eww==
+maker-console-ts@2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.0.22.tgz#c3af6abd7e31e050e5be6a0aaea5ce5ac2a6495b"
+  integrity sha512-3dOv0EUrVdnPFF+e37ddZEtzho8zzg97d2v8E/Vlrf4yljRNxm043SlhqYNgmGnn8/Lxm+UaM9/Iaq/qLtAisQ==
   dependencies:
     commander "^6.2.1"
     dotenv "^8.2.0"
