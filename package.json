@@ -4,6 +4,7 @@
   "description": "ExpressWebJs Version 4.2",
   "main": "build/app.js",
   "scripts": {
+    "maker": "ts-node maker",
     "test": "jest",
     "dev": "ts-node maker run-dev",
     "start": "node ./build/maker run-start",
@@ -33,10 +34,10 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "expressweb-scheduler-ts": "^1.0.4",
-    "expresswebcorets": "2.1.13",
+    "expresswebcorets": "2.1.14",
     "expresswebjs-preset-ts": "1.0.5",
     "log4js": "^6.3.0",
-    "maker-console-ts": "2.0.20",
+    "maker-console-ts": "2.0.22",
     "module-alias": "^2.2.2",
     "objection": "^3.0.1",
     "pg": "^8.10.0",
