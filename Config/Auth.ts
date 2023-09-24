@@ -1,4 +1,3 @@
-import { env } from "Elucidate/Env";
 export default {
   /*
   |--------------------------------------------------------------------------
@@ -25,7 +24,7 @@ export default {
     driver: "jwt",
     uid: "email",
     password: "password",
-    secret: env("APP_KEY"),
+    secret: process.env["APP_KEY"],
     options: {
       expiresIn: 86400, //default is 86400 (24 hrs)
     },
