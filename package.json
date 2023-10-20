@@ -4,6 +4,7 @@
   "description": "ExpressWebJs Version 4.2",
   "main": "build/app.js",
   "scripts": {
+    "maker": "ts-node maker",
     "test": "jest",
     "dev": "ts-node maker run-dev",
     "start": "node ./build/maker run-start",
