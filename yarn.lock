@@ -1868,15 +1868,15 @@ commander@^10.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.1.tgz#881ee46b4f77d1c1dccc5823433aa39b022cbe06"
   integrity sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==
 
+commander@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-11.1.0.tgz#62fdce76006a68e5c1ab3314dc92e800eb83d906"
+  integrity sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==
+
 commander@^2.12.1:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
-
-commander@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
-  integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
 
 common-ancestor-path@^1.0.1:
   version "1.0.1"
@@ -2191,10 +2191,10 @@ expressweb-scheduler-ts@^1.0.4:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@2.1.19:
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.19.tgz#53cf2b2ff0c97e857336dfe0817a39a15c1b5be5"
-  integrity sha512-NVvepBAiMiXTXmupVwAKVw16OPe5ZIk+Y//POZTMiN/P/IUGRR0raf066bTjiiSWlVbaOkob6IYNEh/8QeSDZw==
+expresswebcorets@2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.23.tgz#b7a2c55e209f5792d27074653916ede086147d26"
+  integrity sha512-0eMom0dyZ2GKvbVyjP3cvniEG8F1+isdNWn2dtFJOoiGycUiDiSEeSFqbSdjXvmnCDIsSxl+/fFD/+61vC9dgw==
   dependencies:
     "@grpc/grpc-js" "^1.8.19"
     "@grpc/proto-loader" "^0.7.8"
@@ -2221,7 +2221,6 @@ expresswebcorets@2.1.19:
     set-value "^4.1.0"
     simple-encryptor "^4.0.0"
     swagger-autogen "^2.23.1"
-    swagger-ui-express "^4.6.3"
     typescript-collections "^1.3.3"
     validatorjs "^3.22.1"
     workerpool "^6.3.1"
@@ -3049,12 +3048,12 @@ make-fetch-happen@^11.0.0, make-fetch-happen@^11.0.1, make-fetch-happen@^11.0.3,
     socks-proxy-agent "^7.0.0"
     ssri "^10.0.0"
 
-maker-console-ts@2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.0.22.tgz#c3af6abd7e31e050e5be6a0aaea5ce5ac2a6495b"
-  integrity sha512-3dOv0EUrVdnPFF+e37ddZEtzho8zzg97d2v8E/Vlrf4yljRNxm043SlhqYNgmGnn8/Lxm+UaM9/Iaq/qLtAisQ==
+maker-console-ts@2.0.25:
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.0.25.tgz#f1f2dd1834b3a9866670c90edce5682bd67d65e6"
+  integrity sha512-n9SqW6BM/WJYW80gC0AspK9vxJDsoJKVXsdbC8HaP+sdJ228MggVcWv/p+XpUSTyGrXUBnpzskxh48w76nVpKg==
   dependencies:
-    commander "^6.2.1"
+    commander "^11.1.0"
     dotenv "^8.2.0"
     figlet "^1.5.0"
     inquirer "^7.3.3"
@@ -4459,18 +4458,6 @@ swagger-autogen@^2.23.1:
     deepmerge "^4.2.2"
     glob "^7.1.7"
     json5 "^2.2.3"
-
-swagger-ui-dist@>=4.11.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-5.2.0.tgz#175e112b3aea756fdbbbb035d4cffef26ac579d1"
-  integrity sha512-rLvJBgualxNZcwKOmTFzy4zF1nHy+3S0pUDDR/ageDRZgi8aITSe7pVYiAy03xGQZtqEifjwEtHQE+eF14gveg==
-
-swagger-ui-express@^4.6.3:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.6.3.tgz#870d0892654fe80e6970a2d680e22521acd2dc19"
-  integrity sha512-CDje4PndhTD2HkgyKH3pab+LKspDeB/NhPN2OF1j+piYIamQqBYwAXWESOT1Yju2xFg51bRW9sUng2WxDjzArw==
-  dependencies:
-    swagger-ui-dist ">=4.11.0"
 
 tar@^6.1.11, tar@^6.1.13, tar@^6.1.15, tar@^6.1.2:
   version "6.1.15"
