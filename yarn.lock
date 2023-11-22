@@ -3048,10 +3048,10 @@ make-fetch-happen@^11.0.0, make-fetch-happen@^11.0.1, make-fetch-happen@^11.0.3,
     socks-proxy-agent "^7.0.0"
     ssri "^10.0.0"
 
-maker-console-ts@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.1.tgz#a9b97e8477f3abaf8bc2160b3649d9eef3e72245"
-  integrity sha512-UX2gAxF7Yh7IBVoLiE3u+BuCXisDNMmJlMYGpxHhpb2RL+RRMU6vC9UW4hMEJk3sVKjfLW8swwufvruhgSdFtw==
+maker-console-ts@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.2.tgz#7bd0d4db5c522f9ce457eb39cb9ecacdda41f3f0"
+  integrity sha512-4Lny6gm79X9FOwsuj7A0U7Xun6N13qaLFpG7/DYs4uF6IxuZG/Vw+t6gUh1AlE3yS0AJs4nRRGAycsQBZGZuYw==
   dependencies:
     commander "^11.1.0"
     dotenv "^8.2.0"
