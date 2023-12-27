@@ -73,7 +73,7 @@ export default {
   | Transports to allow connections to
   |
   */
-  transports: ["polling", "websocket"],
+  transports: ["polling", "websocket"] as Transport[],
 
   /*
   |--------------------------------------------------------------------------
@@ -100,3 +100,5 @@ export default {
     credentials: true,
   },
 };
+
+type Transport = "polling" | "websocket";

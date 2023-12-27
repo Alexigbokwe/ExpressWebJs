@@ -12,7 +12,7 @@ import { Request, Response } from "Config/Http";
 */
 
 Route.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to ExpressWebJs Version 4.2");
+  res.send("Welcome to ExpressWebJs Version 4.2.1");
 });
 
 //--------------------------------------------------------------------------
