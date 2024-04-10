@@ -1,7 +1,7 @@
 import commands from "./Resources/Command";
 import kernel from "./App/Console/Kernel";
 import database from "./Config/Database";
-import Console from "maker-console-ts";
+import { Console } from "maker-console-ts";
 
 /*
 |--------------------------------------------------------------------------

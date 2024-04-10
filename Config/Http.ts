@@ -19,7 +19,7 @@ export const protocolConfiguration: ProtocolConfiguration = {
   |
   */
 
-export { Request, Response, NextFunction } from "Elucidate/HttpContext/Platform/Express";
+export type { Request, Response, NextFunction } from "Elucidate/HttpContext/Platform/Express";
 
 /*
   |--------------------------------------------------------------------------
