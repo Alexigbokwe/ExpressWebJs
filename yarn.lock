@@ -2195,10 +2195,10 @@ express@^4.19.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-expressweb-scheduler-ts@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/expressweb-scheduler-ts/-/expressweb-scheduler-ts-1.0.4.tgz#f5ec317ae2dd7936f69fe47a01b9a6a0d0755abb"
-  integrity sha512-sHhs9lE1UoZDBptPG5UP1LbD3GNyi+BYJBmEAqkGDsgfAK7oETvdp+nZF0fB+PpF1YD/sx+C/GUjLESYDjx9Ig==
+expressweb-scheduler-ts@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/expressweb-scheduler-ts/-/expressweb-scheduler-ts-1.0.6.tgz#a300f2a5400ee7b0a35d9b7e08dca0a752004e52"
+  integrity sha512-PWOyhzu58a4Wlu8/0F9MEvBIU3cN6W0NOAbX1u739Hor1foReEQF2hZpUDyxHWW1rTNgkY1a0zxzUGqiMRtvfg==
   dependencies:
     node-cron "^2.0.3"
     shelljs "^0.8.4"

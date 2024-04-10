@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "expressweb-scheduler-ts": "^1.0.4",
+    "expressweb-scheduler-ts": "1.0.6",
     "expresswebcorets": "2.1.31",
     "expresswebjs-preset-ts": "1.0.5",
     "log4js": "^6.3.0",
