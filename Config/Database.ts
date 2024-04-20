@@ -48,7 +48,7 @@ export default {
   | The tenant array accepts an object of database connections (tenants).
   |
   */
-  multitenant_tenants: DBConnection.multitenant<ObjectionConfigurationType>("Objection", []),
+  multitenant_tenants: DBConnection.multitenant<ObjectionConfigurationType>([]),
 
   /*
   |--------------------------------------------------------------------------
