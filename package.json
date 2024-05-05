@@ -39,9 +39,6 @@
     "log4js": "^6.3.0",
     "maker-console-ts": "2.1.7",
     "module-alias": "^2.2.2",
-    "objection": "^3.0.1",
-    "pg": "^8.10.0",
-    "pg-hstore": "^2.3.4",
     "recursive-copy": "^2.0.13",
     "set-value": "^4.1.0"
   }
