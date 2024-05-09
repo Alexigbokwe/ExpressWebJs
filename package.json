@@ -22,7 +22,6 @@
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.22",
-    "@types/mongoose-paginate": "^5.0.8",
     "@types/node": "^14.14.17",
     "@types/workerpool": "^6.1.0",
     "ts-node": "^10.9.1",
