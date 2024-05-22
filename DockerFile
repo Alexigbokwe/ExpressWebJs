@@ -1,19 +1,32 @@
-FROM node:14-alpine
+FROM node:21-alpine3.18 as base
 
-RUN mkdir -p /app/expressweb-version4
-
-WORKDIR /app/expressweb-version4
-
-COPY package.json .
-
+# Stage 1: All dependencies
+FROM base as deps
+WORKDIR /app
+ADD package.json ./
 RUN npm install
 
+# Stage 2: Production dependencies
+FROM base as production-deps
+WORKDIR /app
+ADD package.json ./
 RUN npm install ts-node
+RUN npm install --omit=dev
 
-COPY . .
-
+# Stage 3: Project Build
+FROM base as build
+WORKDIR /app
+COPY --from=deps /app/node_modules /app/node_modules
+ADD . .
 RUN npm run build
 
-EXPOSE 5200
-
+# Stage 4: Production stage
+FROM base
+ENV NODE_ENV=production
+WORKDIR /app
+COPY --from=production-deps /app/node_modules /app/node_modules
+COPY --from=production-deps /app/package.json /app/package.json
+COPY --from=build /app/build /app
+COPY --from=build /app/.env /app/.env
+EXPOSE 8080
 CMD ["npm","start"]
