@@ -36,7 +36,6 @@ const commands = [
   "ExpressWebJs/commands/run-dev",
   "ExpressWebJs/commands/run-build",
   "ExpressWebJs/commands/run-start",
-  "ExpressWebJs/commands/run-prod",
   "ExpressWebJs/commands/make-domain",
   "ExpressWebJs/commands/domain:make-controller",
   "ExpressWebJs/commands/domain:make-model",
