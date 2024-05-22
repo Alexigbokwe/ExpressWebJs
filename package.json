@@ -7,7 +7,7 @@
     "maker": "ts-node maker",
     "test": "jest",
     "dev": "ts-node maker run-dev",
-    "start": "node ./build/maker run-start",
+    "start": "ts-node maker run-start",
     "build": "ts-node maker run-build"
   },
   "keywords": [
@@ -36,7 +36,7 @@
     "expresswebcorets": "2.1.41",
     "expresswebjs-preset-ts": "1.0.5",
     "log4js": "^6.3.0",
-    "maker-console-ts": "2.1.15",
+    "maker-console-ts": "2.1.16",
     "module-alias": "^2.2.2",
     "recursive-copy": "^2.0.13",
     "set-value": "^4.1.0"

@@ -2144,10 +2144,10 @@ make-fetch-happen@^13.0.0, make-fetch-happen@^13.0.1:
     promise-retry "^2.0.1"
     ssri "^10.0.0"
 
-maker-console-ts@2.1.15:
-  version "2.1.15"
-  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.15.tgz#38f90b98d47190cf2b0f9a1fcde5054bb400b0e4"
-  integrity sha512-ND9RaHGf0fxRYvd8SpzWcAXQdbWLYeF6mMxYYrVy10kEeR1K+vsT/rpE7kw1gyABTZijITvP75VfmsYv5XePug==
+maker-console-ts@2.1.16:
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.16.tgz#cf55b679570beb63024f371e0a246d2387ed6eae"
+  integrity sha512-ABc6JjsSlea5B9XRYZTqL9RcpHQxzRhsKt7CB8EZbPaRBZsGjuJD/niPavj1Fm2TMsoqLoZAFutJCABOGc/EOQ==
   dependencies:
     commander "^11.1.0"
     dotenv "^8.2.0"
