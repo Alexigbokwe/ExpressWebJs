@@ -36,11 +36,7 @@
     "expresswebcorets": "2.1.41",
     "expresswebjs-preset-ts": "1.0.5",
     "log4js": "^6.3.0",
-<<<<<<< HEAD
-    "maker-console-ts": "2.1.15",
-=======
-    "maker-console-ts": "2.1.16",
->>>>>>> df41cdf451770f5bedb145109755621fbbf36d46
+    "maker-console-ts": "2.1.17",
     "module-alias": "^2.2.2",
     "recursive-copy": "^2.0.13",
     "set-value": "^4.1.0"
