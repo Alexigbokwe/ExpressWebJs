@@ -1296,10 +1296,10 @@ expressweb-scheduler-ts@1.0.6:
     node-cron "^2.0.3"
     shelljs "^0.8.4"
 
-expresswebcorets@2.1.59:
-  version "2.1.59"
-  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.59.tgz#716133b95cd017c23e5bbc9a423dbb2a5ed54d2b"
-  integrity sha512-sXvobpBD585gvaM3zuLOKHBNTnoan+gDknnBmGFzX+eMLWT67ux39QKjWmPz4LY4eq7oB2wMlvjepCzYG3HfHA==
+expresswebcorets@2.1.64:
+  version "2.1.64"
+  resolved "https://registry.yarnpkg.com/expresswebcorets/-/expresswebcorets-2.1.64.tgz#1c4bab43a12c535f6f932fb803db1423ba04b570"
+  integrity sha512-3rNlq5mOLxf2Rg917FpIsVGoTEAa2Gf8skKXbq6ip9NYdpbIezrYPXsJ8OVkh9SKuo4okQTrkcX8Q3Geuh93JA==
   dependencies:
     "@grpc/grpc-js" "^1.10.6"
     "@grpc/proto-loader" "^0.7.12"
@@ -1316,6 +1316,7 @@ expresswebcorets@2.1.59:
     jsonwebtoken "^9.0.0"
     knex "^3.1.0"
     log4js "^6.4.0"
+    module-alias "^2.2.3"
     npm "^10.5.2"
     passport-oauth2 "^1.7.0"
     pluralize "^8.0.0"
@@ -2144,10 +2145,10 @@ make-fetch-happen@^13.0.0, make-fetch-happen@^13.0.1:
     promise-retry "^2.0.1"
     ssri "^10.0.0"
 
-maker-console-ts@2.1.17:
-  version "2.1.17"
-  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.17.tgz#a6816b91dd9c88b071fd5ba4109aa5ce2daf15f6"
-  integrity sha512-9Q7v7W1bdwtG8uo+IKRi0aOHXOhsVzwAGzUrhdIHyEK8TxvbwyZQh0NuTogKard6gahMvsKYRGAeXOR1WF++Yw==
+maker-console-ts@2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/maker-console-ts/-/maker-console-ts-2.1.23.tgz#db485182f744747cd23fc31203ed4fff512ea5f1"
+  integrity sha512-VUDuzazTe6DUr/HaMEaD5iUx0zo2WCG95J75XiY6r89Kkvh4E5gdvZ1MoWkZrwGfxp2bJNiOuMDKNrjTiywkCw==
   dependencies:
     commander "^11.1.0"
     dotenv "^8.2.0"
@@ -2156,7 +2157,7 @@ maker-console-ts@2.1.17:
     module-alias "^2.2.3"
     ora "^5.1.0"
     recursive-copy "^2.0.13"
-    shelljs "^0.8.4"
+    shelljs "^0.8.5"
     tsc-watch "^4.6.0"
 
 map-stream@~0.1.0:
@@ -3104,7 +3105,7 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shelljs@^0.8.4:
+shelljs@^0.8.4, shelljs@^0.8.5:
   version "0.8.5"
   resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.5.tgz#de055408d8361bed66c669d2f000538ced8ee20c"
   integrity sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==
